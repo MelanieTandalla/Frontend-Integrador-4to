@@ -16,10 +16,10 @@ export class ProductComponent implements OnInit {
 
   ngOnInit(): void {
     this.getProducts();
-   // this.getProduct();
-    //this.updateProduct();
+    //this.getProduct();
     //this.createProduct();
-    //this.deleteProduct(295);
+    //this.updateProduct();
+    //this.deleteProduct(34);
   }
  getProducts(){
    this.productHttpService.getAll().subscribe(
@@ -29,15 +29,15 @@ export class ProductComponent implements OnInit {
       )
  }
  getProduct(){
-   this.productHttpService.getOne(2).subscribe(
+   this.productHttpService.getOne(498).subscribe(
     response=>{
       console.log(response)})
  }
  createProduct(){
   const data = {
-    title: 'Computadora Itel core i7',
+    title: 'Camiseta NEW COLLECTION',
     price: 650,
-    description: 'Electrodomesticos / Erick Guevara',
+    description: 'Camiseta T40 / Melanie Tandalla',
     images: [
       'https://m.media-amazon.com/images/I/51A+xXT0yiL._AC_SY580_.jpg',
     ],
@@ -52,14 +52,15 @@ export class ProductComponent implements OnInit {
  }
  updateProduct(){
   const data = {
-    title: 'Computadora Itel core i10',
+    title: 'Camiseta Antigua Coleccion',
     price: 1150,
-    description: 'Electrodomesticos / Erick Guevara',
+    description: 'Blusa T36 / Melanie Tandalla',
   };
-  this.productHttpService.update(1,data).subscribe(
+  this.productHttpService.update(498,data).subscribe(
     response => {
       console.log(response)})
  }
+
  deleteProduct(id:ProductModel['id']){
   this.productHttpService.destroy(id).subscribe(
     response => {
