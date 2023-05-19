@@ -1,14 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CategoryComponent } from './category/category.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { ProductComponent } from './products/products.component';
+import { ProductsComponent } from './products/products.component';
 
 
 
 @NgModule({
-  declarations: [CategoryComponent, DashboardComponent, ProductComponent],
+  declarations: [ DashboardComponent, ProductsComponent],
   imports: [CommonModule],
-  exports: [CategoryComponent, DashboardComponent, ProductComponent],
+  exports: [ DashboardComponent,ProductsComponent ],
 })
 export class PagesModule {}

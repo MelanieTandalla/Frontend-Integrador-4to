@@ -21,9 +21,9 @@ import { NoFoundPageComponent } from './noFoundPage/no-found-page.component';
         BrowserModule,
         HttpClientModule,
       AppRoutingModule,
-        PagesModule,
       SharedModule,
-        AuthModule
+        AuthModule,
+        PagesModule
     ]
 })
 export class AppModule {}
