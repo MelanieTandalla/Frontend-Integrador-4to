@@ -1,42 +1,39 @@
-<!-- ============================================================== -->
-    <!-- Main wrapper - style you can find in pages.scss -->
-    <!-- ============================================================== -->
-    <section id="wrapper" class="login-register login-sidebar" style="background-image:url(./assets/images/background/login-register.jpg);">
-        <div class="login-box card">
+<section id="wrapper" class="login-register login-sidebar"
+    style="background-image:url('https://th.bing.com/th/id/R.4f432ede81bd32c96606b5a33dcb9221?rik=xQcbrr45r%2bk9gw&riu=http%3a%2f%2fwww.cibepyme.com%2fexport%2fsites%2fcibepyme%2fminisites%2fcosta_rica%2f.content%2fimagenes%2festadisticas.jpg_1160572873.jpg&ehk=DwNwt0tZs0zutFdB5riVQv%2bwz%2fzOXwMURIUfHoansxo%3d&risl=&pid=ImgRaw&r=0');">
+    <div class="login-box card" style="margin-right: 400px;height: 560px; margin-top: 25px; border-radius: 15px; background-color: bisque;width: 30%;">
             <div class="card-body">
                 <form class="form-horizontal form-material" id="loginform" action="index.html">
-                    <a href="javascript:void(0)" class="text-center db"><img src="./assets/images/logo-icon.png" alt="Home" /><br/><img src="./assets/images/logo-text.png" alt="Home" /></a>
+                    <a href="javascript:void(0)" class="text-center db"><img src="../../../assets/images/LOGO.png" alt="Home" style="height: 80px; margin-top: 15px;"/><br/></a>
                     <div class="form-group m-t-40">
                         <div class="col-xs-12">
-                            <input class="form-control" type="text" required="" placeholder="Username">
+                            <input class="form-control" type="email" id="email"
+                            pattern=".+@globex\.com" size="30" required ="" placeholder="email">
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-xs-12">
-                            <input class="form-control" type="password" required="" placeholder="Password">
+                            <input class="form-control" type="password" required="" placeholder="Contraseña">
                         </div>
                     </div>
-                    <div class="form-group row">
+                    <div id="to-recover" class="form-group row">
                         <div class="col-md-12">
                             <div class="checkbox checkbox-primary pull-left p-t-0">
                                 <input id="checkbox-signup" type="checkbox" class="filled-in chk-col-light-blue">
-                                <label for="checkbox-signup"> Remember me </label>
+                                <label for="checkbox-signup"> Recuérdame </label>
                             </div>
-                            <a href="javascript:void(0)" id="to-recover" class="text-dark pull-right"><i class="fa fa-lock m-r-5"></i> Forgot pwd?</a> </div>
+                            <br>
+                            <a href="javascript:void(0)" class="text-dark pull-right"><i class="fa fa-lock m-r-5"></i> ¿Has olvidado tu contraseña?</a> </div>
                     </div>
-                    <div class="form-group text-center m-t-20">
+                    <div id=registrar class="form-group text-center m-t-20">
                         <div class="col-xs-12">
-                            <button class="btn btn-info btn-lg btn-block text-uppercase btn-rounded" type="submit">Log In</button>
+                            <a id=inicio href="dashboard" class="text-light m-l-5 ">Inicia Sesión</a>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-12 m-t-10 text-center">
-                            <div class="social"><a href="javascript:void(0)" class="btn  btn-facebook" data-toggle="tooltip" title="Login with Facebook"> <i aria-hidden="true" class="fa fa-facebook"></i> </a> <a href="javascript:void(0)" class="btn btn-googleplus" data-toggle="tooltip" title="Login with Google"> <i aria-hidden="true" class="fa fa-google-plus"></i> </a> </div>
-                        </div>
-                    </div>
+
+
                     <div class="form-group m-b-0">
                         <div class="col-sm-12 text-center">
-                            Don't have an account? <a href="pages-register2.html" class="text-primary m-l-5"><b>Sign Up</b></a>
+                            ¿No tienes cuenta aún? <a href="register" class="text-primary m-l-5"><b>Registrarse</b></a>
                         </div>
                     </div>
                 </form>
@@ -61,6 +58,3 @@
             </div>
         </div>
     </section>
-    <!-- ============================================================== -->
-    <!-- End Wrapper -->
-    <!-- ============================================================== -->
