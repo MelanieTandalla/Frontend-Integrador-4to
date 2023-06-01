@@ -1,1 +1,28 @@
-<p>categories works!</p>
+<div class="container">
+	<div class="form__top">
+		<h2>Detalle <span>Producto</span></h2>
+	</div>		
+	<form class="form__reg" action="">
+		<input class="input" type="text" placeholder="&#128100;  Proveedor" required autofocus>
+		<input class="input" type="text" placeholder="&#128100;  Nombre" required autofocus>
+		<input class="input" type="text" placeholder="&#8962;  Precio" required>
+		<input class="input" type="text" placeholder="&#8962;  Descripcion" required>
+		<input class="input" type="text" placeholder="&#8962;  Cantidad" required>
+		
+		<label for="category">Categoria:</label>
+		<select class="input" type="text" name="category">
+			<!-- category options -->
+			<option class="input" value="" selected></option>
+			<option class="input" value="Electrodomesticos">Electrodomesticos</option>
+			<option class="input" value="Televisor">Televisor</option>
+			<option class="input" value="camara">Camara</option>
+		</select>		
+		<label for="image">Imagen:</label>
+                <textarea class="input" type="text" name="image"></textarea>
+        
+		<div class="btn__form">
+			<input class="btn__submit" type="submit" value="REGISTRAR">
+			<input class="btn__reset" type="reset" value="LIMPIAR">	
+		</div>
+	</form>
+</div>

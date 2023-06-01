@@ -1,135 +1,206 @@
-
-.login-register {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-image: url('https://www.whitsundayescape.com/wp-content/uploads/2016/08/Coffee-Beans-HD-Wallpapers.jpg');
-    height: 100%;
+.formu-login {
+    width: 250px;
+    height: 340px;
+    background-color: #FFCC99;
+    border: 3px solid #201310;
+    margin: 0 auto;
+    padding: 12px;
+    border-radius: 10px;
+    transform: translate(0, 50%);
+  }
+  
+  .formu-register {
+    width: 250px;
+    height: 440px;
+    background-color: pink;
+    border: 3px solid #201310;
+    margin: 0 auto;
+    padding: 12px;
+    border-radius: 10px;
+    transform: translate(0, 35%);
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  #email {
+    margin-bottom: 5px;
+  }
+  
+  #email, #password, #name {
+    background-color: #d1bba4;
+    border: 2px solid #201310;
+    border-radius: 8px;
     width: 100%;
-    padding: 10% 0;
-    position: fixed; }
+    color: black;
+    font-weight: bold;
+    padding: 3px;
+  }
   
-  .login-box {
-    width: 400px;
-    margin: 0 auto; }
-    .login-box .footer {
-      width: 100%;
-      left: 0px;
-      right: 0px; }
-    .login-box .social {
-      display: block;
-      margin-bottom: 30px; }
+  a {
+    color: #201310;
+  }
   
-  #recoverform {
-    display: none; }
+  .links {
+    text-align: center;
+    margin-top: 10px;
+  }
   
-  .login-sidebar {
-    padding: 0px;
-    margin-top: 0px; }
-    .login-sidebar .login-box {
-      right: 0px;
-      position: absolute;
-      height: 100%; }
-      @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
-      *{
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-          font-family: 'Open Sans', sans-serif;
-      }
-      body{
-          background: #efefef;
-      }
-      /*:::Boton-Modal:::*/
-      .boton-modal{
-        margin-left: -40px;
-        margin-top: -40px;
-          padding: 40px;
-          background-color: #fff;
-      }
-      .boton-modal label{
-          padding: 10px 15px;
-          background-color: #5488a3;
-          color: #fff;
-          border-radius: 4px;
-          cursor: pointer;
-          transition: all 300ms ease;
-      }
-      .boton-modal label:hover{
-          background-color: #185E83;
-      }
-      /*:::Fin Boton-Modal:::*/
-      
-      /*:::Ventana Modal:::*/
-      #btn-modal{
-          display: none;
-          margin-left: 40px;  }
-      .contaefiner-modal{
-          width: 100%;
-          height: 100vh;
-          position: fixed;
-          top: 0; left: 0;
-          background-color: rgba(144, 148, 150, 0.8);
-          display: none;
-          justify-content: center;
-          align-items: center;
-          z-index: 100;
-      }
-      #btn-modal:checked ~ .container-modal{
-          display: flex;
-      }
-      .content-modal{
-          width: 100%;
-          max-width: 400px;
-          padding: 20px;
-          background-color: #fff;
-          border-radius: 4px;
-      }
-      .content-modal h2{
-          margin-bottom: 15px;
-      }
-      .content-modal p{
-          padding: 15px 0px;
-          border-top: 1px solid #dbdbdb;
-          border-bottom: 1px solid #dbdbdb;
-      }
-      .content-modal .btn-cerrar{
-          width: 100%;
-          margin-top: 15px;
-          display: flex;
-          justify-content: flex-end;
-      }
-      .content-modal .btn-cerrar label{
-          padding: 7px 10px;
-          background-color: #5488a3;
-          color: #fff;
-          border-radius: 4px;
-          cursor: pointer;
-          transition: all 300ms ease;
-      }
-      .content-modal .btn-cerrar label:hover{
-          background-color:#185E83;
-      }
-      .cerrar-modal{
-          width:100%;
-          height: 100vh;
-          position: absolute;
-          top:0; left: 0;
-          z-index: -1;
-      }
-      #bt{
-          margin-top: -25 px;
-          display: block;
-          width: 40%;
-          font-family: Arial, Helvetica, sans-serif;
-          font-weight: 700;
-          border-radius: 10px;
-          background-color: rgb(157, 187, 224);
-          height: 35px;
-          padding-top: 5px;
-          margin-left: 100px;
-          text-align: center;
-      }
+  a:hover {
+    color: black
+  }
   
+  .btns {
+    display: flex;
+    width: 100%;
+  }
   
+  .btn-izquierda {
+    width: 48%;
+  }
   
+  .btn-derecha {
+    margin-left: 4%;
+    width: 48%;
+  }
+  
+  .btn-login {
+    background-color: #4b3024;
+    border: 2px solid #201310;
+    color: #d1bba4;
+    padding: 2px;
+    border-radius: 8px;
+    margin-top: 10px;
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  .btn-login:hover {
+    background-color: #201310;
+    transition: all .3s;
+  }
+  
+  .btn-login:active {
+    background-color: #4b3024;
+  }
+  
+  .btn-atras {
+    background-color: #4b3024;
+    border: 2px solid #201310;
+    color: #d1bba4;
+    padding: 2px;
+    border-radius: 8px;
+    margin-top: 10px;
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  .btn-atras:hover {
+    background-color: #201310;
+    transition: all .3s;
+  }
+  
+  .btn-atras:active {
+    background-color: #4b3024;
+  }
+  
+  .logContenedor {
+    /* background: rgb(100,74,57);
+    background: -moz-linear-gradient(0deg, rgba(100,74,57,1) 0%, rgba(32,19,16,1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(100,74,57,1) 0%, rgba(32,19,16,1) 100%);
+    background: linear-gradient(0deg, rgba(100,74,57,1) 0%, rgba(32,19,16,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#644a39",endColorstr="#201310",GradientType=1); */
+    background-image: url('https://anaestadistica.files.wordpress.com/2018/03/fondo-estadistica.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  @media (min-width: 1536px) {
+    .formu-login {
+        width: 450px;
+        height: fit-content;
+        font-size: 30px;
+        background-color: #8a6141;
+        border: 3px solid #201310;
+        margin: 0 auto;
+        padding: 12px;
+        border-radius: 10px;
+        transform: translate(0, 50%);
+    }
+    
+    .formu-register {
+        width: 450px;
+        height: fit-content;
+        font-size: 30px;
+        background-color: #8a6141;
+        border: 3px solid #201310;
+        margin: 0 auto;
+        padding: 12px;
+        border-radius: 10px;
+        transform: translate(0, 35%);
+    }
+    
+    #email, #password, #name {
+        padding: 3px 10px;
+    }
+    
+    .btns {
+        display: flex;
+        width: 100%;
+    }
+    
+    .btn-izquierda {
+        width: 48%;
+    }
+    
+    .btn-derecha {
+        margin-left: 4%;
+        width: 48%;
+    }
+    
+    .btn-login {
+        background-color: #4b3024;
+        border: 2px solid #201310;
+        color: #d1bba4;
+        padding: 2px;
+        border-radius: 8px;
+        margin-top: 10px;
+        width: 100%;
+        cursor: pointer;
+        height: 50px;
+        font-size: 28px;
+    }
+    
+    .btn-login:hover {
+        background-color: #201310;
+        transition: all .3s;
+    }
+    
+    .btn-login:active {
+        background-color: #4b3024;
+    }
+    
+    .btn-atras {
+        background-color: #4b3024;
+        border: 2px solid #201310;
+        color: #d1bba4;
+        padding: 2px;
+        border-radius: 8px;
+        margin-top: 10px;
+        width: 100%;
+        cursor: pointer;
+        height: 50px;
+        font-size: 28px;
+    }
+    
+    .btn-atras:hover {
+        background-color: #201310;
+        transition: all .3s;
+    }
+    
+    .btn-atras:active {
+        background-color: #4b3024;
+    }
+  }

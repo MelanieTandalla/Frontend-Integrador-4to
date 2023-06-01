@@ -1,41 +1,24 @@
-
-<section id="wrapper" class="login-register login-sidebar"
-    style="background-image:url('https://th.bing.com/th/id/R.4f432ede81bd32c96606b5a33dcb9221?rik=xQcbrr45r%2bk9gw&riu=http%3a%2f%2fwww.cibepyme.com%2fexport%2fsites%2fcibepyme%2fminisites%2fcosta_rica%2f.content%2fimagenes%2festadisticas.jpg_1160572873.jpg&ehk=DwNwt0tZs0zutFdB5riVQv%2bwz%2fzOXwMURIUfHoansxo%3d&risl=&pid=ImgRaw&r=0');">
-    <div class="login-box card" style="margin-right: 400px;height: 500px; margin-top: 25px; border-radius: 15px; background-color: bisque;width: 30%;">
-        <div class="card-body">
-            <form class="form-horizontal form-material" id="loginform" action="index.html">
-                <a href="javascript:void(0)" class="text-center db"><img src="../../../assets/images/LOGO.png"
-                        alt="Home" style="height: 80px; margin-top: 25px;" /><br /></a>
-                <h3 class="box-title m-t-40 m-b-0">Regístrate ahora</h3><small>Crea tu cuenta y disfruta</small>
-                <div class="form-group m-t-20">
-                    <div class="col-xs-12">
-                        <input class="form-control" type="text" required="" placeholder="Nombre">
-                    </div>
-                </div>
-                <div class="form-group ">
-                    <div class="col-xs-12">
-            <input class="form-control" type="email" id="email"
-            pattern=".+@globex\.com" size="30" required  placeholder="Email">
-                    </div>
-                </div>
-                <div class="form-group ">
-                    <div class="col-xs-12">
-                        <input class="form-control" type="password" id="" required="" placeholder="Contraseña">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-xs-12">
-                        <input class="form-control" type="password" required="" placeholder="Confirmar Contraseña">
-                    </div>
-                </div>
+<div class="w-full h-screen logContenedor">
+    <div class="my-10 contenido-register">
+        <form class="shadow-lg shadow-choc1 formu-register">
+            
+            <a href="javascript:void(0)" class="text-center db"><img src="../../../assets/images/LOGO.png" alt="Home" style="height: 50px; margin-top: 5px; margin-left: 5px;"/><br/></a>
+            <label class="" for="name">Nombre:</label>
+            <input class="" id="name" type="text" name="name">
+            <br>
+            <label class="" for="email">Email:</label>
+            <input class="" id="email" type="email" name="email">
+            <br>
+            <label class="" for="password">Contraseña:</label>
+            <input class="" id="password" type="password" name="password">
+            <br>
+            <input class="font-bold text-lg btn-login" type="submit" value="Registrarse">
+            <div class="links">
+                <a href="register" class="olvidado">¿Tienes una cuenta?</a>
                 <br>
-                <div id=text1 class="form-group m-b-0">
-                    <div class="col-sm-12 text-center">
-                        <p>Ya tienes una cuenta? <a href="login"
-                                class="text-info m-l-5"><b>Iniciar Sesión</b></a></p>
-                    </div>
-                </div>
-            </form>
-        </div>
+                <a href="#" class="no-register">Volver al Inicio</a>
+                <br>
+            </div>
+        </form>
     </div>
-</section>
+</div>

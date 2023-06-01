@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    height: 100vh;
+    background-image: url('https://anaestadistica.files.wordpress.com/2018/03/fondo-estadistica.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
