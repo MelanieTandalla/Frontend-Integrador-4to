@@ -20,7 +20,7 @@ export class ProductsService {
     return this.httpClient.get<ProductsModel>(url);
   }
 
-  store(product: CreateProductModelDto): Observable<ProductsModel> {
+  create(product: CreateProductModelDto): Observable<ProductsModel> {
     const url = `${this.API_URL}`;
     return this.httpClient.post<ProductsModel>(url, product);
   }

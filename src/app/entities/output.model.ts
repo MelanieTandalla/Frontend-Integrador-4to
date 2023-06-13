@@ -5,3 +5,11 @@ export interface OutputModel{
   output_quiantity: number,
   
 }
+
+export interface CreateOutputModelDto extends Omit<OutputModel,'id'>{
+
+}
+
+export interface UpdateOutputModelDto extends Partial<OutputModel> {
+
+}

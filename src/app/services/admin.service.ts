@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
-import { AdminModel, CreateProvidersModelDto, UpdateProvidersModelDto } from '../entities/Admin.model';
+import { AdminModel, CreateAdminModelDto, UpdateAdminModelDto } from '../entities/admin.model';
 import { map } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ProvidersService {
+export class adminService {
 
   readonly API_URL = 'https://api.escuelajs.co/api/v1/products';
   constructor(private httpClient: HttpClient) { }
@@ -17,22 +17,22 @@ export class ProvidersService {
     return this.httpClient.get<AdminModel[]>(url);
   }
 
-  getOne(id: AdminModel['id_Admin']): Observable<AdminModel> {
+  getOne(id: AdminModel['id_admin']): Observable<AdminModel> {
     const url = `${this.API_URL}/${id}`;
     return this.httpClient.get<AdminModel>(url);
   }
 
-  store(providers: CreateProvidersModelDto): Observable<AdminModel> {
+  store(admin: CreateAdminModelDto): Observable<AdminModel> {
     const url = `${this.API_URL}`;
-    return this.httpClient.post<AdminModel>(url, providers  );
+    return this.httpClient.post<AdminModel>(url, admin  );
   }
 
-  update(id: AdminModel['id_Admin'],providers: UpdateProvidersModelDto): Observable<AdminModel> {
+  update(id: AdminModel['id_admin'],admin: UpdateAdminModelDto): Observable<AdminModel> {
     const url = `${this.API_URL}/${id}`;
-    return this.httpClient.put<AdminModel>(url, providers);
+    return this.httpClient.put<AdminModel>(url, admin);
   }
 
-  destroy(id: AdminModel['id_Admin']):Observable<boolean>  {
+  destroy(id: AdminModel['id_admin']):Observable<boolean>  {
     const url = `${this.API_URL}/${id}`;
     return this.httpClient.delete<any>(url).pipe(map((response: { rta: boolean }) => { return response.rta })
     );
