@@ -1,8 +1,9 @@
 
 <div class="container">
-    <h1>Detalle de la Salida del Producto</h1>	
+    <h1>NUEVO PRODUCTO</h1>	
         <form class="form__reg">
-            <label for="category">Nombre:</label>
+            <input class="input" type="text" placeholder="&#128100;  Nombre" required autofocus>
+            <label for="category">Categoria:</label>
             <select class="input" type="text" name="category">
                 <!-- category options -->
                 <option class="input" value="" selected></option>
@@ -10,8 +11,15 @@
                 <option class="input" value="Televisor">Televisor</option>
                 <option class="input" value="camara">Camara</option>
             </select>
-            <input class="input" type="number" placeholder="&#128100;  Cantidad" required autofocus>
-            <input class="input" type="date" placeholder="&#8962;  fecha" required>
+            <input class="input" type="text" placeholder="&#8962;  Descripcion" required>
+            <input class="input" type="number" placeholder="&#8962;  Precio Unitario" required>
+            <input class="input" type="number" placeholder="&#8962;  Cantidad Disponible" required>
+            <div>
+                <label for="image">Imagen:</label>
+            <input class="input" type="file" class="file-input w-full max-w-xs" />
+            </div>		
+            
+            
             <div class="btn__form">
                 <input class="btn__submit" type="submit" value="REGISTRAR">
                 <input class="btn__reset" type="reset" value="LIMPIAR">	

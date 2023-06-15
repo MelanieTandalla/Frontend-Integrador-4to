@@ -10,12 +10,14 @@ import { ProductsService } from 'src/app/services/products.service';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent {
+
   products: ProductsModel[] = [];
   selectedProduct: UpdateProductModelDto={}
 
   constructor(private productsService: ProductsService, private categoriesService: CategoriesService) {}
 
   ngOnInit(): void {  
+    
   }
 
     name_product: string = ''
@@ -24,6 +26,7 @@ export class ProductsComponent {
     quantity_available!: number;   //cantidad disponible
     minimum_amount!: number//cantidad minima
     stock!: number
+
 
     getProducts(){
       this.productsService.getAll().subscribe(

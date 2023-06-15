@@ -1,27 +1,48 @@
-<div class="container">
-	<div class="form__top">
-		<h2>Detalle de la Entrada del <span>Producto</span></h2>
-	</div>		
-	<form class="form__reg" action="">
-		<input class="input" type="text" placeholder="&#128100;  Proveedor" required autofocus>
-		<input class="input" type="text" placeholder="&#128100;  Nombre" required autofocus>
-		<input class="input" type="text" placeholder="&#8962;  Precio" required>
-		<input class="input" type="text" placeholder="&#8962;  Descripcion" required>
-		<input class="input" type="text" placeholder="&#8962;  Cantidad" required>
-		<label for="category">Categoria:</label>
-		<select class="input" type="text" name="category">
-			<!-- category options -->
-			<option class="input" value="" selected></option>
-			<option class="input" value="Electrodomesticos">Electrodomesticos</option>
-			<option class="input" value="Televisor">Televisor</option>
-			<option class="input" value="camara">Camara</option>
-		</select>		
-		<label for="image">Imagen:</label>
-                <textarea class="input" type="text" name="image"></textarea>
-        
-		<div class="btn__form">
-			<input class="btn__submit" type="submit" value="REGISTRAR">
-			<input class="btn__reset" type="reset" value="LIMPIAR">	
-		</div>
-	</form>
-</div>
+<div class="text" > Detalle del Ingreso de Producto</div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/dashboard/new-input-details"><i class="mdi mdi-shape-rectangle-plus"></i>Añadir detalles</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    
+  </div>
+</nav>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Proveedor del Proveedor</th>
+      <th scope="col">Nombre del Producto</th>
+      <th scope="col">Precio del Producto</th>
+      <th scope="col"> Descripcion</th>
+      <th scope="col"> </th>
+      <th scope="col"> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Johan</td>
+      <td>Pilas</td>
+      <td>$77</td>
+      <td>Pilas ahorrativas</td>
+      <td><button class="btn btn-outline">Editar</button></td>
+      <td><button class="btn btn-outline">Eliminar</button></td>
+    </tr>
+    <tr>
+      <td>Plancha</td>
+      <td>Electrodometico</td>
+      <td>$77</td>
+      <td>Pilas ahorrativas</td>
+      <td><button class="btn btn-outline">Editar</button></td>
+      <td><button class="btn btn-outline">Eliminar</button></td>
+    </tr>
+    <tr>
+      <td>Plancha</td>
+      <td>Electrodometico</td>
+      <td>$77</td>
+      <td>Pilas ahorrativas</td>
+        <td><button class="btn btn-outline">Editar</button></td>
+        <td><button class="btn btn-outline">Eliminar</button></td>
+    </tr>
+  </tbody>
+</table>

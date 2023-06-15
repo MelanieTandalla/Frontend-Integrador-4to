@@ -1,207 +1,228 @@
-.formu-login {
-  width: 250px;
-  height: 440px;
-  background-color: pink;
-  border: 3px solid #201310;
-  margin: 0 auto;
-  padding: 15px;
-  border-radius: 10px;
-  transform: translate(0, 50%);
+/* efectos por defecto */
+body {
+  font-family: 'Overpass', sans-serif;
+  font-weight: normal;
+  font-size: 100%;
+  color: #ff1717;
+  
+  margin: 0;
+  background-color: #03c6f7;
 }
 
-.formu-register {
-  width: 250px;
-  height: 295px;
-  background-color: #FFCC99;
-  border: 3px solid #201310;
-  margin: 0 auto;
-  padding: 12px;
-  border-radius: 10px;
-  transform: translate(0, 35%);
-}
-
-label {
-  font-weight: bold;
-}
-
-#email {
-  margin-bottom: 5px;
-}
-
-#email, #password, #name {
-  background-color: #d1bba4;
-  border: 2px solid #201310;
-  border-radius: 8px;
-  width: 100%;
-  color: black;
-  font-weight: bold;
-  padding: 3px;
-  position: relative;
-}
-
-a {
-  color: #201310;
-}
-
-.links {
-  text-align: center;
-  margin-top: 10px;
-}
-
-a:hover {
-  color: black
-}
-
-.btns {
+/* efectos para el contenedor de pantalla completa */
+#contenedor {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  margin: 0;
+  padding: 0;
+  min-width: 100vw;
+  min-height: 100vh;
   width: 100%;
+  height: 100%;
+  
 }
 
-.btn-izquierda {
-  width: 48%;
+/* contenedor del login a la izquierda */
+#contenedorcentrado {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction:row;
+  
+  min-width: 380px;
+  max-width: 900px;
+  width: 90%;
+  
+  background-color: bisque;
+  
+  /*opacity: 0.50;
+  filter: alpha(opacity=50);*/
+  
+  border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  
+  -webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
+  -moz-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
+  box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
+  
+  padding: 30px;
+  box-sizing: border-box;
 }
 
-.btn-derecha {
-  margin-left: 4%;
-  width: 48%;
+/* formulario de login */
+/* formulario de login */
+#login {
+  width: 100%;
+  max-width: 320px;
+  min-width: 320px;
+  padding: 30px 30px 50px 30px;
+  background-color: #d5d5d5;;
+  
+  -webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
+  -moz-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
+  box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
+  
+  border-radius: 3px 3px 3px 3px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  -webkit-border-radius: 3px 3px 3px 3px;
+  
+  box-sizing: border-box;
+  
+  opacity: 1;
+  filter: alpha(opacity=1);
 }
 
-.btn-login {
-  background-color: #4b3024;
-  border: 2px solid #201310;
-  color: #d1bba4;
-  padding: 2px;
-  border-radius: 8px;
+#login label {
+  display: block;
+  font-family: 'Overpass', sans-serif;
+  font-size: 120%;
+  color:#6a6a6a;
+  
+  margin-top: 15px;
+}
+
+#login input {
+  font-family: 'Overpass', sans-serif;
+  font-size: 110%;
+  color: #0d94dc;
+  
+  display: block;
+  width: 100%;
+  height: 40px;
+  
+  margin-bottom: 10px;
+  padding: 5px 5px 5px 10px;
+  
+  box-sizing: border-box;
+  
+  border: none;
+  border-radius: 3px 3px 3px 3px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  -webkit-border-radius: 3px 3px 3px 3px;
+}
+
+#login input::placeholder {
+  font-family: 'Overpass', sans-serif;
+  color: #E4E4E4;
+}
+
+#login button {
+  font-family: 'Overpass', sans-serif;
+  font-size: 110%;
+  color:#1b262c;
+  width: 100%;
+  height: 40px;
+  border: none;
+  
+  border-radius: 3px 3px 3px 3px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  -webkit-border-radius: 3px 3px 3px 3px;
+  
+  background-color: rgb(250, 194, 127);
+  
   margin-top: 10px;
+}
+
+#login button:hover {
+  background-color: #3589b4;
+  color:#dfcdc3;
+}
+/* formulario de login */
+/* formulario de login */
+
+/* seccion de la derecha */
+/* seccion de la derecha */
+/* por defecto */
+#derecho {
+  /*display: flex;
+  align-items:center;
+  justify-content:center;*/
+  
+  text-align: center;
   width: 100%;
-  cursor: pointer;
+  
+  opacity: 0.70;
+  filter: alpha(opacity=70);
+  
+  padding:20px 20px 20px 50px;
+  box-sizing: border-box;
 }
 
-.btn-login:hover {
-  background-color: #201310;
-  transition: all .3s;
+.titulo {
+  font-size: 300%;
+  color:#687384;
 }
 
-.btn-login:active {
-  background-color: #4b3024;
+.logo-empresa img {
+  width: 60%;
 }
 
-.btn-atras {
-  background-color: #4b3024;
-  border: 2px solid #201310;
-  color: #d1bba4;
-  padding: 2px;
-  border-radius: 8px;
-  margin-top: 10px;
-  width: 100%;
-  cursor: pointer;
+hr {
+  border-top: 1px solid #8c8b8b;
+border-bottom: 1px solid #dfcdc3;
+  
+}
+.pie-form {
+  font-size: 90%;
+  text-align: center;    
+  margin-top: 15px;
 }
 
-.btn-atras:hover {
-  background-color: #201310;
-  transition: all .3s;
+.pie-form a {
+  display: block;
+  text-decoration: none;
+  color: #505050;
+  margin-bottom: 3px;
 }
 
-.btn-atras:active {
-  background-color: #4b3024;
+.pie-form a:hover {
+  color: #1f1f1f;
 }
+/* seccion de la derecha */
+/* seccion de la derecha */
 
-.logContenedor {
-  /* background: rgb(100,74,57);
-  background: -moz-linear-gradient(0deg, rgba(100,74,57,1) 0%, rgba(32,19,16,1) 100%);
-  background: -webkit-linear-gradient(0deg, rgba(100,74,57,1) 0%, rgba(32,19,16,1) 100%);
-  background: linear-gradient(0deg, rgba(100,74,57,1) 0%, rgba(32,19,16,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#644a39",endColorstr="#201310",GradientType=1); */
-  background-image: url('https://anaestadistica.files.wordpress.com/2018/03/fondo-estadistica.jp');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
+/* ajustar a pantallas con ancho menor o igual a 775px; */
+/* ajustar a pantallas con ancho menor o igual a 775px; */
+@media all and (max-width: 775px)
+{
+  #contenedorcentrado {
+      flex-direction:column-reverse;
 
-@media (min-width: 1536px) {
-  .formu-login {
-      width: 450px;
-      height: fit-content;
-      font-size: 30px;
-      background-color: #8a6141;
-      border: 3px solid #201310;
+      min-width: 380px;
+      max-width: 900px;
+      width: 90%;
+
+      background-color: #5f6769;
+
+      /*opacity: 0.50;
+      filter: alpha(opacity=50);*/
+
+      border-radius: 10px 10px 10px 10px;
+      -moz-border-radius: 10px 10px 10px 10px;
+      -webkit-border-radius: 10px 10px 10px 10px;
+
+      -webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
+      -moz-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
+      box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
+
+      padding: 30px;
+      box-sizing: border-box;
+  }
+  
+  #login {
       margin: 0 auto;
-      padding: 12px;
-      border-radius: 10px;
-      transform: translate(0, 50%);
   }
   
-  .formu-register {
-      width: 450px;
-      height: fit-content;
-      font-size: 30px;
-      background-color: #8a6141;
-      border: 3px solid #201310;
-      margin: 0 auto;
-      padding: 12px;
-      border-radius: 10px;
-      transform: translate(0, 35%);
+  #derecho {
+      padding:20px 20px 20px 20px;
   }
   
-  #email, #password, #name {
-      padding: 3px 10px;
-  }
-  
-  .btns {
-      display: flex;
-      width: 100%;
-  }
-  
-  .btn-izquierda {
-      width: 48%;
-  }
-  
-  .btn-derecha {
-      margin-left: 4%;
-      width: 48%;
-  }
-  
-  .btn-login {
-      background-color: #4b3024;
-      border: 2px solid #201310;
-      color: #d1bba4;
-      padding: 2px;
-      border-radius: 8px;
-      margin-top: 10px;
-      width: 100%;
-      cursor: pointer;
-      height: 50px;
-      font-size: 28px;
-  }
-  
-  .btn-login:hover {
-      background-color: #201310;
-      transition: all .3s;
-  }
-  
-  .btn-login:active {
-      background-color: #4b3024;
-  }
-  
-  .btn-atras {
-      background-color: #4b3024;
-      border: 2px solid #201310;
-      color: #d1bba4;
-      padding: 2px;
-      border-radius: 8px;
-      margin-top: 10px;
-      width: 100%;
-      cursor: pointer;
-      height: 50px;
-      font-size: 28px;
-  }
-  
-  .btn-atras:hover {
-      background-color: #201310;
-      transition: all .3s;
-  }
-  
-  .btn-atras:active {
-      background-color: #4b3024;
+  #login label {
+      text-align: left;
   }
 }
+/* ajustar a pantallas con ancho menor o igual a 775px; */
+/* ajustar a pantallas con ancho menor o igual a 775px; */

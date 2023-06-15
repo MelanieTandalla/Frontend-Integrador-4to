@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { NoFoundPageComponent } from './noFoundPage/no-found-page.component';
 import { PagesRoutingModule } from './pages/pages-routing.module';
 import { AuthRoutingModule } from './auth/auth-routing.module';
+import { ProductsComponent } from './pages/products/products.component';
 
 const routes:Routes = [
 
