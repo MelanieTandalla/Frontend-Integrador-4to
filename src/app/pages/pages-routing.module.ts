@@ -17,6 +17,7 @@ import { NewInputDetailsComponent } from './input-detail/new-input-details/new-i
 import { FormsModule } from '@angular/forms';
 import { ProviderComponent } from './provider/provider.component';
 import { NewProviderComponent } from './provider/new-provider/new-provider.component';
+import { LoginComponent } from '../auth/login/login.component';
 
 
 
@@ -38,6 +39,9 @@ const routes: Routes = [
       { path:'new-input-details', component: NewInputDetailsComponent },
       { path:'providers', component: ProviderComponent },
       { path:'new-provider', component: NewProviderComponent },
+      { path:'profile-admin', component: ProfileAdminComponent },
+      { path:'dashboard', component: DashboardComponent},
+
 
 
       { path:'', component: DashboardComponent },

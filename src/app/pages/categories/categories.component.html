@@ -1,11 +1,13 @@
-<div class="text" > Categorias</div>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="/dashboard/new_categories"><i class="mdi mdi-shape-rectangle-plus"></i>Añadir categorias</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+<div class="text"> Categorias</div>
+<nav class="navbar">
+  <a href="/dashboard/new_categories"><button class="buttonañadir" type="submit" href="/dashboard/new_categories"><i
+        class="mdi mdi-shape-rectangle-plus"></i>Añadir categorias</button> </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+    aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
-    
+
   </div>
 </nav>
 <table class="table">
@@ -21,41 +23,103 @@
       <td>Plancha</td>
       <td>Electrodometico</td>
       <td><button class="btn btn-outline"><!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-          Lanzar demo de modal
-        </button>
-        
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Título del modal</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                ...
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-primary">Guardar cambios</button>
+          <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Editar
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Editar Producto</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <h1>CATEGORIA</h1>
+                  <form class="form__reg">
+                    <input class="input" type="text" placeholder="&#128100;  Nombre" name="nombres" autofocus>
+                    <input class="input" type="text" placeholder="&#8962;  Descripcion" name="description" required>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  <button type="button" class="btn btn-info">Guardar cambios</button>
+                </div>
               </div>
             </div>
           </div>
-        </div></button></td>
-      <td><button class="btn btn-outline">Eliminar</button></td>
+        </button></td>
+      <td><button class="btn btn-primary">Eliminar</button></td>
     </tr>
     <tr>
       <td>Plancha</td>
       <td>Electrodometico</td>
-      <td><button class="btn btn-outline">Editar</button></td>
-      <td><button class="btn btn-outline">Eliminar</button></td>
+      <td><button class="btn btn-outline"><button class="btn btn-outline"><!-- Button trigger modal -->
+            <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Editar
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Editar Producto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <h1>CATEGORIA</h1>
+                    <form class="form__reg">
+                      <input class="input" type="text" placeholder="&#128100;  Nombre" name="nombres" autofocus>
+                      <input class="input" type="text" placeholder="&#8962;  Descripcion" name="description" required>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-info">Guardar cambios</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </button></button></td>
+      <td><button class="btn btn-primary">Eliminar</button></td>
     </tr>
     <tr>
       <td>Plancha</td>
       <td>Electrodometico</td>
-        <td><button class="btn btn-outline">Editar</button></td>
-        <td><button class="btn btn-outline">Eliminar</button></td>
+      <td><button class="btn btn-outline"><button class="btn btn-outline"><!-- Button trigger modal -->
+            <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Editar
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Editar Producto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <h1>CATEGORIA</h1>
+                    <form class="form__reg">
+                      <input class="input" type="text" placeholder="&#128100;  Nombre" name="nombres" autofocus>
+                      <input class="input" type="text" placeholder="&#8962;  Descripcion" name="description" required>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-info">Guardar cambios</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </button></button></td>
+      <td><button class="btn btn-primary">Eliminar</button></td>
     </tr>
   </tbody>
 </table>

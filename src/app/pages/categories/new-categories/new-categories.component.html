@@ -3,12 +3,7 @@
     <h1>NUEVO CATEGORIA</h1>	
         <form class="form__reg">
             <input class="input" type="text" placeholder="&#128100;  Nombre" name ="nombres" ([ngModel])="categories.name" autofocus>
-            <input class="input" type="text" placeholder="&#8962;  Descripcion" name="description" ([ngModel])="categories.description"  required>
-            <div>
-                <label for="image">Imagen:</label>
-            <input class="input" type="file" class="file-input w-full max-w-xs" />
-            </div>		
-            
+            <input class="input" type="text" placeholder="&#8962;  Descripcion" name="description" ([ngModel])="categories.description"  required>           
             
             <div class="btn__form">
                 <input class="btn__submit" type="submit" value="REGISTRAR" (click)="registerCategories(categories)">
