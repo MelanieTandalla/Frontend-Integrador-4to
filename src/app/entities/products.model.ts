@@ -11,10 +11,10 @@ export interface ProductsModel {
   stock: number
 }
 
-export interface CreateProductModelDto extends Omit<ProductsModel,'id' | 'category'>{
+export interface CreateProductDto extends Omit<ProductsModel,'id' | 'category'>{
   id_category: number
 }
 
-export interface UpdateProductModelDto extends Partial<ProductsModel> {
+export interface UpdateProductDto extends Partial<ProductsModel> {
   id_category?:number;
 }

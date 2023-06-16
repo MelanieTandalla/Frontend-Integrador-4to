@@ -14,6 +14,9 @@ import { NewProductComponent } from './products/new-product/new-product.componen
 import { NewCategoriesComponent } from './categories/new-categories/new-categories.component';
 import { ProfileAdminComponent } from './profile-admin/profile-admin.component';
 import { NewInputDetailsComponent } from './input-detail/new-input-details/new-input-details.component';
+import { FormsModule } from '@angular/forms';
+import { ProviderComponent } from './provider/provider.component';
+import { NewProviderComponent } from './provider/new-provider/new-provider.component';
 
 
 
@@ -33,6 +36,8 @@ const routes: Routes = [
       { path:'new_categories', component: NewCategoriesComponent },
       { path:'profile_admin', component: ProfileAdminComponent },
       { path:'new-input-details', component: NewInputDetailsComponent },
+      { path:'providers', component: ProviderComponent },
+      { path:'new-provider', component: NewProviderComponent },
 
 
       { path:'', component: DashboardComponent },
@@ -51,6 +56,7 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forChild(routes),
     AuthModule,
+    FormsModule
   ]
 })
 export class PagesRoutingModule { }

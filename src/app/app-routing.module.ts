@@ -6,6 +6,7 @@ import { NoFoundPageComponent } from './noFoundPage/no-found-page.component';
 import { PagesRoutingModule } from './pages/pages-routing.module';
 import { AuthRoutingModule } from './auth/auth-routing.module';
 import { ProductsComponent } from './pages/products/products.component';
+import { FormsModule } from '@angular/forms';
 
 const routes:Routes = [
 
@@ -19,7 +20,8 @@ const routes:Routes = [
     CommonModule,
     RouterModule.forRoot(routes),
     PagesRoutingModule,
-    AuthRoutingModule
+    AuthRoutingModule,
+    FormsModule
   ],
   exports:[
     RouterModule
