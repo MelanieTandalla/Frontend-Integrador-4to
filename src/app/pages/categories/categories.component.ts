@@ -36,6 +36,13 @@ export class CategoriesComponent implements OnInit {
     this.Categories.push(this.Prueba)
     console.log(this.Categories)
   }
-
-
+  deleteProduct(id:CategoriesModel['id_category']){
+    this.categoriesService.destroyCategories(id).subscribe(
+      response => {
+        this.Categories= this.Categories.filter(categorie => categorie.id_category != id);
+        console.log(response)})
+   }
 }
+
+
+

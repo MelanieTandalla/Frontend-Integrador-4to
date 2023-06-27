@@ -24,6 +24,7 @@ a.buttonañadir{
 
 .btn__editar{
     background-color: chocolate;
+	
 }
 /*--------------------------------------------------------*/
 
@@ -98,7 +99,8 @@ h2 span {
 }
 
 .btn__submit:hover {
-	background-color: #4C9ED9;
+	background-color: #d9b84c;
+	
 }
 
 .btn__reset:hover{
