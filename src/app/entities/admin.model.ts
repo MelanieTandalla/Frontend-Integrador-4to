@@ -7,7 +7,7 @@ export interface AdminModel{
   password: string,
 }
 
-export interface CreateAdminModelDto extends Omit<AdminModel,'id'>{
+export interface CreateAdminModelDto extends Omit<AdminModel,'id_admin'>{
 
 }
 

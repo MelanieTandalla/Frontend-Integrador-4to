@@ -14,7 +14,7 @@ import { NewProductComponent } from './products/new-product/new-product.componen
 import { NewCategoriesComponent } from './categories/new-categories/new-categories.component';
 import { ProfileAdminComponent } from './profile-admin/profile-admin.component';
 import { NewInputDetailsComponent } from './input-detail/new-input-details/new-input-details.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProviderComponent } from './provider/provider.component';
 import { NewProviderComponent } from './provider/new-provider/new-provider.component';
 import { LoginComponent } from '../auth/login/login.component';
@@ -60,7 +60,8 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forChild(routes),
     AuthModule,
-    FormsModule
+    FormsModule, 
+    ReactiveFormsModule
   ]
 })
 export class PagesRoutingModule { }

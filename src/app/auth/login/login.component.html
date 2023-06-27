@@ -38,12 +38,12 @@
                 <div id="login">
                     <form id="loginform">
                         <label for="usuario">Usuario</label>
-                        <input id="usuario" type="text" name="usuario" placeholder="Usuario" >
+                        <input id="usuario" type="text" name="usuario" placeholder="Usuario" required minlength="10" maxlength="15">
                         
                         <label for="password">Contraseña</label>
                         <input id="password" type="password" placeholder="Contraseña" name="password" >
                         
-                        <button type="submit" title="Ingresar" name="Ingresar" href="/dashboard">Login</button>
+                        <button type="submit" title="Ingresar" name="Ingresar" href="/dashboard"><i class="mdi mdi-chevron-double-right"></i>Login</button>
                     </form>
                     
                 </div>
@@ -53,7 +53,7 @@
                     </div>
                     <hr>
                     <div class="pie-form">
-                        <a href="/register">¿No tienes Cuenta? Registrate</a>
+                        <a href="/register">¿No tienes Cuenta? <br><i class="mdi mdi-account-multiple-plus"></i> Registrate</a>
                         <hr>
                     </div>
                 </div>

@@ -10,7 +10,7 @@ import { CategoriesModel, CreateCategoriesModelDto, UpdateCategoriesModelDto } f
 })
 export class CategoriesService {
 
-  readonly API_URL = 'https://api.escuelajs.co/api/v1/products';
+  readonly API_URL = 'http://localhost:3000/api/v1/category/';
   constructor(private httpClient: HttpClient) { }
   
   getAllCategories(): Observable<CategoriesModel[]> {
@@ -23,9 +23,9 @@ export class CategoriesService {
     return this.httpClient.get<CategoriesModel>(url);
   }
 
-  createCategories(categories: CreateCategoriesModelDto): Observable<CategoriesModel> {
+  createCategories(category: CreateCategoriesModelDto): Observable<CreateCategoriesModelDto> {
     const url = `${this.API_URL}`;
-    return this.httpClient.post<CategoriesModel>(url, categories  );
+    return this.httpClient.post<CreateCategoriesModelDto>(url, category);
   }
 
   updateCategories(id: CategoriesModel['id_category'], categories: UpdateCategoriesModelDto): Observable<CategoriesModel> {

@@ -6,7 +6,7 @@ import { NoFoundPageComponent } from './noFoundPage/no-found-page.component';
 import { PagesRoutingModule } from './pages/pages-routing.module';
 import { AuthRoutingModule } from './auth/auth-routing.module';
 import { ProductsComponent } from './pages/products/products.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './auth/login/login.component';
 
 const routes:Routes = [
@@ -23,7 +23,7 @@ const routes:Routes = [
     RouterModule.forRoot(routes),
     PagesRoutingModule,
     AuthRoutingModule,
-    FormsModule
+    FormsModule,
   ],
   exports:[
     RouterModule

@@ -156,9 +156,6 @@ body {
   color:#687384;
 }
 
-.logo-empresa img {
-  width: 60%;
-}
 
 hr {
   border-top: 1px solid #8c8b8b;
@@ -174,8 +171,9 @@ border-bottom: 1px solid #dfcdc3;
 .pie-form a {
   display: block;
   text-decoration: none;
-  color: #505050;
+  color: #323232;
   margin-bottom: 3px;
+  font-size: 17px;
 }
 
 .pie-form a:hover {

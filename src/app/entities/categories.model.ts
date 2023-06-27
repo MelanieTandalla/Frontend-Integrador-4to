@@ -6,7 +6,7 @@ export interface CategoriesModel{
 
 
 export interface CreateCategoriesModelDto extends Omit<CategoriesModel,'id_category'>{
-
+  
 }
 
 export interface UpdateCategoriesModelDto extends Omit<CategoriesModel,'id_category'>{

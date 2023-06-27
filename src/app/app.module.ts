@@ -12,6 +12,7 @@ import { CategoriesDetailsComponent } from './pages/categories/categories-detail
 import { NewProductComponent } from './pages/products/new-product/new-product.component';
 import { NewCategoriesComponent } from './pages/categories/new-categories/new-categories.component';
 import { NewInputDetailsComponent } from './pages/input-detail/new-input-details/new-input-details.component';
+import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [
@@ -31,7 +32,8 @@ import { NewInputDetailsComponent } from './pages/input-detail/new-input-details
       AppRoutingModule,
       SharedModule,
         AuthModule,
-        PagesModule
+        PagesModule,
+        FormsModule,
     ]
 })
 export class AppModule {}

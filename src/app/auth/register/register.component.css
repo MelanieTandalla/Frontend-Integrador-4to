@@ -1,13 +1,4 @@
 /* efectos por defecto */
-body {
-  font-family: 'Overpass', sans-serif;
-  font-weight: normal;
-  font-size: 100%;
-  color: #ff1717;
-  
-  margin: 0;
-  background-color: #03c6f7;
-}
 
 /* efectos para el contenedor de pantalla completa */
 #contenedor {
@@ -32,8 +23,8 @@ body {
   flex-direction:row;
   
   min-width: 380px;
-  max-width: 900px;
-  width: 90%;
+  max-width: 1000px;
+  width: 100%;
   
   background-color: bisque;
   
@@ -57,9 +48,9 @@ body {
 #login {
   width: 100%;
   max-width: 320px;
-  min-width: 320px;
+  min-width: 450px;
   padding: 30px 30px 50px 30px;
-  background-color: #d5d5d5;;
+  background-color: #d5d5d5;
   
   -webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
   -moz-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
@@ -73,32 +64,25 @@ body {
   
   opacity: 1;
   filter: alpha(opacity=1);
+
 }
 
-#login label {
-  display: block;
-  font-family: 'Overpass', sans-serif;
-  font-size: 120%;
-  color:#6a6a6a;
-  
-  margin-top: 15px;
-}
 
 #login input {
   font-family: 'Overpass', sans-serif;
   font-size: 110%;
-  color: #0d94dc;
+  color: #2b2b2b;
   
   display: block;
   width: 100%;
-  height: 40px;
+  height: 45px;
   
-  margin-bottom: 10px;
-  padding: 5px 5px 5px 10px;
+  margin-bottom: 15px;
+  padding: 5px 5px 5px 20px;
   
   box-sizing: border-box;
-  
   border: none;
+  border-bottom: 1px solid rgb(37, 37, 37);
   border-radius: 3px 3px 3px 3px;
   -moz-border-radius: 3px 3px 3px 3px;
   -webkit-border-radius: 3px 3px 3px 3px;
@@ -106,15 +90,15 @@ body {
 
 #login input::placeholder {
   font-family: 'Overpass', sans-serif;
-  color: #E4E4E4;
+  color: #868686;
 }
 
 #login button {
   font-family: 'Overpass', sans-serif;
   font-size: 110%;
-  color:#1b262c;
+  color:#181818;
   width: 100%;
-  height: 40px;
+  height: 45px;
   border: none;
   
   border-radius: 3px 3px 3px 3px;
@@ -122,14 +106,10 @@ body {
   -webkit-border-radius: 3px 3px 3px 3px;
   
   background-color: rgb(250, 194, 127);
-  
   margin-top: 10px;
 }
 
-#login button:hover {
-  background-color: #3589b4;
-  color:#dfcdc3;
-}
+
 /* formulario de login */
 /* formulario de login */
 
@@ -156,13 +136,9 @@ body {
   color:#687384;
 }
 
-.logo-empresa img {
-  width: 60%;
-}
-
 hr {
   border-top: 1px solid #8c8b8b;
-border-bottom: 1px solid #dfcdc3;
+  border-bottom: 1px solid #dfcdc3;
   
 }
 .pie-form {
@@ -174,8 +150,10 @@ border-bottom: 1px solid #dfcdc3;
 .pie-form a {
   display: block;
   text-decoration: none;
-  color: #505050;
+  color: #2a2a2a;
   margin-bottom: 3px;
+  font-size: 17px;
+  
 }
 
 .pie-form a:hover {

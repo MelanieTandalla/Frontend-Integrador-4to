@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class adminService {
 
-  readonly API_URL = 'https://api.escuelajs.co/api/v1/products';
+  readonly API_URL = 'http://localhost:3000/api/v1/admin';
   constructor(private httpClient: HttpClient) { }
   
   getAll(): Observable<AdminModel[]> {

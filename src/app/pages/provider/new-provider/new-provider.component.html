@@ -2,12 +2,17 @@
 <div class="container">
     <h1>NUEVO PROVEDOR</h1>	
         <form class="form__reg">
-            <input class="input" type="text" placeholder="&#128100;  Nombre del Proveedor" name ="nombres" autofocus>
-            <input class="input" type="text" placeholder="&#8962;  Direccion" required>
-            <input class="input" type="text" placeholder="&#8962;  Telefono" required>
-            
+            <input class="input" type="text" placeholder="&#128100;  Nombre del Proveedor" name ="Nombres"[(ngModel)]="providers.name_provider" required minlength="10" maxlength="20">
+            <input class="input" type="text" placeholder="&#8962;  Direccion" name ="Direecion" required [(ngModel)]="providers.direction" required minlength="10" maxlength="30">
+                <input class="input" type="number" placeholder="&#8962;  Telefono" name ="Telefono" required [(ngModel)]="providers.phone" required maxlength="8" [formControl]="telefonoCtrl">
+                <p *ngIf="telefonoCtrl.errors && telefonoCtrl.dirty"> <small class="text-danger" *ngIf="telefonoCtrl.hasError('required')">Este campo es requerido</small>
+                    <small class="text-danger" *ngIf="telefonoCtrl.hasError('pattern')">¡El numero de telefono solo acepta numeros!<br> Evite usar letras o caracteres especiales ej: (*$%, etc)</small>
+                    <small class="text-danger" *ngIf="telefonoCtrl.hasError('maxlength')">Debe tener como maximo 10 dijitos</small>
+                    <small class="text-danger" *ngIf="telefonoCtrl.hasError('minlength')">Debe tener como minimo 10 dijitos</small>
+                </p>
+
             <div class="btn__form">
-                <input class="btn__submit" type="submit" value="REGISTRAR" >
+                <input class="btn__submit" type="submit" value="REGISTRAR" (click)="registerProviders(providers)">
                 <input class="btn__reset" type="reset" value="LIMPIAR">	
             </div>
         </form>

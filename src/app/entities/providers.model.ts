@@ -5,7 +5,7 @@ export interface ProvidersModel {
   phone: number
 }
 
-export interface CreateProvidersModelDto extends Omit<ProvidersModel,'id'>{
+export interface CreateProvidersModelDto extends Omit<ProvidersModel,'id_providers'>{
 
 }
 

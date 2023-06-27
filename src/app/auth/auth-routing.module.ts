@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { DashboardComponent } from '../pages/dashboard/dashboard.component';
+import { FormControl, ReactiveFormsModule } from '@angular/forms';
 
   
 const routes:Routes = [
@@ -17,7 +18,9 @@ const routes:Routes = [
   declarations: [],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+
+
   ]
 })
 export class AuthRoutingModule { }
