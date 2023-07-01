@@ -10,7 +10,7 @@ import { CategoriesModel, CreateCategoriesModelDto, UpdateCategoriesModelDto } f
 })
 export class CategoriesService {
 
-  readonly API_URL = 'http://localhost:3000/api/v1/category/';
+  readonly API_URL = 'http://localhost:3000/api/v1/category';
   constructor(private httpClient: HttpClient) { }
   
   getAllCategories(): Observable<CategoriesModel[]> {
@@ -18,7 +18,7 @@ export class CategoriesService {
     return this.httpClient.get<CategoriesModel[]>(url);
   }
 
-  getOneCategories(id: CategoriesModel['id_category']): Observable<CategoriesModel> {
+  getOneCategories(id: CategoriesModel['id']): Observable<CategoriesModel> {
     const url = `${this.API_URL}/${id}`;
     return this.httpClient.get<CategoriesModel>(url);
   }
@@ -28,12 +28,12 @@ export class CategoriesService {
     return this.httpClient.post<CreateCategoriesModelDto>(url, category);
   }
 
-  updateCategories(id: CategoriesModel['id_category'], categories: UpdateCategoriesModelDto): Observable<CategoriesModel> {
-    const url = `${this.API_URL}/${id}`;
-    return this.httpClient.put<CategoriesModel>(url, categories);
+  updateCategories(categories: UpdateCategoriesModelDto): Observable<CategoriesModel> {
+    const url = `${this.API_URL}/${categories.id}`;
+    return this.httpClient.patch<CategoriesModel>(url, categories);
   }
 
-  destroyCategories(id: CategoriesModel['id_category']):Observable<boolean>  {
+  destroyCategories(id: CategoriesModel['id']):Observable<boolean>  {
     const url = `${this.API_URL}/${id}`;
     return this.httpClient.delete<any>(url).pipe(map((response: { rta: boolean }) => { return response.rta })
     );

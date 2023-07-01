@@ -22,7 +22,7 @@ export class NewCategoriesComponent implements OnInit {
   }
 
   category: CreateCategoriesModelDto = {
-    name: '',
+    name_category: '',
     description: '',
   };
 
@@ -35,22 +35,8 @@ export class NewCategoriesComponent implements OnInit {
       });
   }
 
-  categoriesEntity: UpdateCategoriesModelDto={
-    id_category:0,
-    name: '',
-    description: ''
-
-  }
   
-  updateCategories(categories: UpdateCategoriesModelDto) {
-    console.log(categories)
-    console.log('update')
-    const response = this.categoriesService
-      .updateCategories(categories.id_category, categories)
-      .subscribe((response) => {
-        console.log(response);
-      });
-  }
+
 
   
 }

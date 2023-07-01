@@ -1,6 +1,6 @@
 export interface CategoriesModel{
-  id_category: number,
-  name: string,
+  id?: string|null,
+  name_category: string,
   description: string
 }
 
@@ -10,5 +10,5 @@ export interface CreateCategoriesModelDto extends Omit<CategoriesModel,'id_categ
 }
 
 export interface UpdateCategoriesModelDto extends Omit<CategoriesModel,'id_category'>{
-  id_category: number
+  id?: string| null
 }

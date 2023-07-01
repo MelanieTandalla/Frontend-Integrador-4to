@@ -26,7 +26,7 @@ export class NewProviderComponent {
   providers: CreateProvidersModelDto={
     name_provider: '',
     direction: '',
-    phone: 0,
+    telephone: '',
   }
 
   registerProviders(providers: CreateProvidersModelDto) {

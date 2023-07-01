@@ -1,27 +1,30 @@
+
 <div class="container">
-	<div class="form__top">
-		<h2>Detalle de la Entrada del <span>Producto</span></h2>
-	</div>		
-	<form class="form__reg" action="">
-		<input class="input" type="text" placeholder="&#128100;  Proveedor" required autofocus>
-		<input class="input" type="text" placeholder="&#128100;  Nombre" required autofocus>
-		<input class="input" type="text" placeholder="&#8962;  Precio" required>
-		<input class="input" type="text" placeholder="&#8962;  Descripcion" required>
-		<input class="input" type="text" placeholder="&#8962;  Cantidad" required>
-		<label for="category">Categoria:</label>
-		<select class="input" type="text" name="category">
-			<!-- category options -->
-			<option class="input" value="" selected></option>
-			<option class="input" value="Electrodomesticos">Electrodomesticos</option>
-			<option class="input" value="Televisor">Televisor</option>
-			<option class="input" value="camara">Camara</option>
-		</select>		
-		<label for="image">Imagen:</label>
-                <textarea class="input" type="text" name="image"></textarea>
-        
-		<div class="btn__form">
-			<input class="btn__submit" type="submit" value="REGISTRAR">
-			<input class="btn__reset" type="reset" value="LIMPIAR">	
-		</div>
-	</form>
-</div>
+    <h1>Editar CATEGORIA</h1>	
+        <form class="form__reg" [formGroup]="editarform" (ngSubmit)="submit(editarform.value)" method="POST">
+            <input class="input" type="text" placeholder="&#128100;  Nombres" name ="name" autofocus required minlength="10" maxlength="15" formControlName="name_category">
+            <input class="input" type="text" placeholder="&#8962;  Descripcion" name="description" required minlength="10" maxlength="25" formControlName="description">           
+            
+            <div class="btn__form">
+                <input class="btn__submit" type="submit" value="REGISTRAR"  data-bs-toggle="modal" data-bs-target="#exampleModal" >
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    Categoria Registrada con Exito!!
+                  </div>
+                  <div class="modal-footer">
+                    <input class="btn btn-secondary" type="reset" value="Listo" data-bs-dismiss="modal">
+                  </div>
+                </div>
+              </div>
+            </div>
+                <input class="btn__reset" type="reset" value="LIMPIAR">	
+            </div>
+        </form>
+    
+    </div>

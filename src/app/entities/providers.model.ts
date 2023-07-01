@@ -2,7 +2,7 @@ export interface ProvidersModel {
   id_providers: number,
   name_provider: string,
   direction: string,
-  phone: number
+  telephone: string
 }
 
 export interface CreateProvidersModelDto extends Omit<ProvidersModel,'id_providers'>{

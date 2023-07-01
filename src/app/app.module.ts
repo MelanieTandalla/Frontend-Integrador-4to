@@ -34,6 +34,7 @@ import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
         AuthModule,
         PagesModule,
         FormsModule,
+        ReactiveFormsModule,
     ]
 })
 export class AppModule {}

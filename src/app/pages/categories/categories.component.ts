@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
+import { ActivatedRoute, Route, Router } from '@angular/router';
 import { CategoriesModel, CreateCategoriesModelDto, UpdateCategoriesModelDto } from 'src/app/entities/categories.model';
 import { UpdateProvidersModelDto } from 'src/app/entities/providers.model';
 import { CategoriesService } from 'src/app/services/categories.service';
@@ -10,32 +12,30 @@ import { CategoriesService } from 'src/app/services/categories.service';
 })
 export class CategoriesComponent implements OnInit {
    
-  constructor(private categoriesService: CategoriesService) {}
-  Categories: CategoriesModel[] = [];
+  constructor(private categoriesService: CategoriesService, private activedrouter: ActivatedRoute, private router: Router) {}
+
 
   ngOnInit(): void {
-    this.getCategories();
-    this.Prueba2();
+    this.categoriesService.getAllCategories().subscribe(data=>{
+      this.categories= data;
+    })     
   }
 
-  getCategories() { 
-    this.categoriesService.getAllCategories().subscribe((res) => {
-      this.Categories = res
-      console.table(this.Categories)
-    });
+  editar(id:CategoriesModel['id']){
+    this.router.navigate(['dashboard/categories_details', id])
+    
   }
 
-  Prueba: CategoriesModel={
-    id_category:1,
-    name: '',
-    description:''
 
+
+  categories: CategoriesModel[]=[];
+
+  deletecategory(id:CategoriesModel['id']){
+    this.categoriesService.destroyCategories(id).subscribe(
+      response=>{
+        this.categories=this.categories.filter(
+          category=>category.id != id)
+      })
   }
-
-  Prueba2(){
-    this.Categories.push(this.Prueba)
-    console.log(this.Categories)
-  }
-
 
 }
