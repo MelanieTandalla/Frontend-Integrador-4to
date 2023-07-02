@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CategoriesModel } from 'src/app/entities/categories.model';
 import { CreateProductDto, ProductsModel } from 'src/app/entities/products.model';
+import { CategoriesService } from 'src/app/services/categories.service';
 import { ProductsService } from 'src/app/services/products.service';
 
 @Component({
@@ -9,12 +10,16 @@ import { ProductsService } from 'src/app/services/products.service';
   styleUrls: ['./new-product.component.css']
 })
 export class NewProductComponent {
-  constructor(private productsService: ProductsService) { }
+  constructor(private productsService: ProductsService, private categoriesService: CategoriesService) { }
 
   productModel : ProductsModel[]=[];
-  categories: CategoriesModel[]=[];
+  opciones: CategoriesModel[]=[];
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.categoriesService.getAllCategories().subscribe(data=>{
+      this.opciones= data;
+    }) 
+  }
 
   products: CreateProductDto = {
     id_products: 0,
@@ -35,4 +40,8 @@ export class NewProductComponent {
         console.log(response);
       });
   }
+
+
+
+
 }
