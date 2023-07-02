@@ -17,8 +17,6 @@ export class NewProviderComponent {
     Validators.minLength(2)
   ])
 
-
-
   ngOnInit(): void {
 
   }

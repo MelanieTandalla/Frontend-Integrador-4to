@@ -38,10 +38,10 @@ export class RegisterComponent {
   constructor(private adminService: adminService){}
 
   Createadmin: CreateAdminModelDto={
-    name: '',
-    lastname: '',
-    phone: 0,
-    email: '',
+    name_admin: '',
+    last_name: '',
+    telephone: 0,
+    gmail: '',
     password: '',
 
   }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CategoriesModel } from 'src/app/entities/categories.model';
 import { CreateProductDto, ProductsModel } from 'src/app/entities/products.model';
 import { ProductsService } from 'src/app/services/products.service';
 
@@ -11,6 +12,7 @@ export class NewProductComponent {
   constructor(private productsService: ProductsService) { }
 
   productModel : ProductsModel[]=[];
+  categories: CategoriesModel[]=[];
 
   ngOnInit(): void {}
 
@@ -22,7 +24,7 @@ export class NewProductComponent {
     unit_price: 0,
     quantity_available: 0, //cantidad disponible
     minimum_amount: 0, //cantidad minima
-    stock: 0
+    stock: true,
   }
 
   registerProduct(products: CreateProductDto) {

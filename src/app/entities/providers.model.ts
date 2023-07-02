@@ -1,5 +1,5 @@
 export interface ProvidersModel { 
-  id_providers: number,
+  id_provider?: number,
   name_provider: string,
   direction: string,
   telephone: string

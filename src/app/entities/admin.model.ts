@@ -1,9 +1,9 @@
 export interface AdminModel{
   id_admin: number,
-  name: string,
-  lastname: string,
-  phone: number,
-  email: string,
+  name_admin: string,
+  last_name: string,
+  telephone: number,
+  gmail: string,
   password: string,
 }
 

@@ -38,19 +38,6 @@ export class CategoriesComponent implements OnInit {
       })
   }
 
-<<<<<<< HEAD
-=======
-  Prueba2(){
-    this.Categories.push(this.Prueba)
-    console.log(this.Categories)
-  }
-  deleteProduct(id:CategoriesModel['id_category']){
-    this.categoriesService.destroyCategories(id).subscribe(
-      response => {
-        this.Categories= this.Categories.filter(categorie => categorie.id_category != id);
-        console.log(response)})
-   }
->>>>>>> 4835473de1f2c7cd8e635bfc282f585b4a3bfd52
 }
 
 

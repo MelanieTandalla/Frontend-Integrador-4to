@@ -17,7 +17,7 @@ export class ProvidersService {
     return this.httpClient.get<ProvidersModel[]>(url);
   }
 
-  getOne(id: ProvidersModel['id_providers']): Observable<ProvidersModel> {
+  getOne(id: ProvidersModel['id_provider']): Observable<ProvidersModel> {
     const url = `${this.API_URL}/${id}`;
     return this.httpClient.get<ProvidersModel>(url);
   }
@@ -27,12 +27,12 @@ export class ProvidersService {
     return this.httpClient.post<ProvidersModel>(url, providers  );
   }
 
-  update(id: ProvidersModel['id_providers'],providers: UpdateProvidersModelDto): Observable<ProvidersModel> {
+  update(id: ProvidersModel['id_provider'],providers: UpdateProvidersModelDto): Observable<ProvidersModel> {
     const url = `${this.API_URL}/${id}`;
     return this.httpClient.put<ProvidersModel>(url, providers);
   }
 
-  destroy(id: ProvidersModel['id_providers']):Observable<boolean>  {
+  destroy(id: ProvidersModel['id_provider']):Observable<boolean>  {
     const url = `${this.API_URL}/${id}`;
     return this.httpClient.delete<any>(url).pipe(map((response: { rta: boolean }) => { return response.rta })
     );
