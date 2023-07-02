@@ -22,13 +22,14 @@ export class NewProductComponent {
   }
 
   products: CreateProductDto = {
-    id_products: 0,
+    id_product: 0,
     name_product: '',
     description: '',
     id_category: 0,
     unit_price: 0,
     quantity_available: 0, //cantidad disponible
     minimum_amount: 0, //cantidad minima
+    unit_box:true,
     stock: true,
   }
 

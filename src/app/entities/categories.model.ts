@@ -9,6 +9,5 @@ export interface CreateCategoriesModelDto extends Omit<CategoriesModel,'id_categ
   
 }
 
-export interface UpdateCategoriesModelDto extends Omit<CategoriesModel,'id_category'>{
-  id?: string| null
+export interface UpdateCategoriesModelDto extends CategoriesModel{
 }

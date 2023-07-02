@@ -12,7 +12,7 @@ import { CategoriesService } from 'src/app/services/categories.service';
 })
 export class CategoriesComponent implements OnInit {
    
-  constructor(private categoriesService: CategoriesService, private activedrouter: ActivatedRoute, private router: Router) {}
+  constructor(private categoriesService: CategoriesService) {}
 
 
   ngOnInit(): void {
@@ -21,12 +21,12 @@ export class CategoriesComponent implements OnInit {
     })     
   }
 
-  editar(id:CategoriesModel['id']){
-    this.router.navigate(['dashboard/categories_details', id])
-    
+
+  categoryModel: UpdateCategoriesModelDto={
+    id:'',
+    name_category:'',
+    description:''
   }
-
-
 
   categories: CategoriesModel[]=[];
 
@@ -37,6 +37,16 @@ export class CategoriesComponent implements OnInit {
           category=>category.id != id)
       })
   }
+
+  updateCategory(category: UpdateCategoriesModelDto) {
+    const response = this.categoriesService
+    .updateCategories(category)
+      .subscribe((response) => {
+        console.log(response);
+      });
+  }
+
+  
 
 }
 

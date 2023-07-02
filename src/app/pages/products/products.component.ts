@@ -49,10 +49,10 @@ export class ProductsComponent {
           });
     }
 
-    deleteProduct(id:ProductsModel['id_products']){
+    deleteProduct(id:ProductsModel['id_product']){
       this.productsService.destroyProducts(id).subscribe(
         response => {
-          this.products= this.products.filter(product => product.id_products != id);
+          this.products= this.products.filter(product => product.id_product != id);
           console.log(response)})
      }
 }

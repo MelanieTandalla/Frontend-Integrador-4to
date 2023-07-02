@@ -23,7 +23,7 @@
       <td >{{category.name_category}}</td>
       <td>{{category.description}}</td>
       <td><button class="btn btn-outline"><!-- Button trigger modal --> 
-          <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="editar(category.id)"> Editar</button>
+          <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal"> Editar</button>
 
           <!-- Modal -->
           <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -37,13 +37,13 @@
                 <div class="modal-body">
                   <h1>CATEGORIA</h1>
                   <form class="form__reg">
-                    <input class="input" type="text" placeholder="&#128100;  Nombre" name="nombres" autofocus>
-                    <input class="input" type="text" placeholder="&#8962;  Descripcion" name="description" required>
+                    <input class="input" type="text" placeholder="&#128100;  Nombre" name="nombres" [(ngModel)]="categoryModel.name_category"  autofocus>
+                    <input class="input" type="text" placeholder="&#8962;  Descripcion" name="description"[(ngModel)]="categoryModel.description" required>
                   </form>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                  <button type="button" class="btn btn-info">Guardar cambios</button>
+                  <button type="button" class="btn btn-info" (click)="updateCategory(categoryModel)">Guardar cambios</button>
                 </div>
               </div>
             </div>
