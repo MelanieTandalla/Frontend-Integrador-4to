@@ -4,18 +4,17 @@ export interface ProductsModel {
   id_product: number,
   name_product: string,
   description: string,
-  id_category: number,
+  category: CategoriesModel,
+  name_category: number,
   unit_price: number,
-  quantity_available: number, //cantidad disponible
-  minimum_amount: number, //cantidad minima
-  unit_box: boolean,
-  stock: boolean
+  quantity_available: number, //cantidad disponibl/cantidad minima
+  until_box: boolean,
 }
 
-export interface CreateProductDto extends Omit<ProductsModel,'id' | 'category'>{
-  id_category: number
+export interface CreateProductDto extends Omit<ProductsModel,'id_product'|'category'|'name_category'>{
+  category: string
 }
 
-export interface UpdateProductDto extends Partial<ProductsModel> {
+export interface UpdateProductDto extends Omit<ProductsModel, 'id_category'> {
   id_category?:number;
 }

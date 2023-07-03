@@ -18,7 +18,7 @@ export class CategoriesService {
     return this.httpClient.get<CategoriesModel[]>(url);
   }
 
-  getOneCategories(id: CategoriesModel['id']): Observable<CategoriesModel> {
+  getOneCategories(id: CategoriesModel['id_category']): Observable<CategoriesModel> {
     const url = `${this.API_URL}/${id}`;
     return this.httpClient.get<CategoriesModel>(url);
   }
@@ -28,12 +28,14 @@ export class CategoriesService {
     return this.httpClient.post<CreateCategoriesModelDto>(url, category);
   }
 
-  updateCategories(categories: UpdateCategoriesModelDto): Observable<CategoriesModel> {
-    const url = `${this.API_URL}/${categories.id}`;
-    return this.httpClient.patch<CategoriesModel>(url, categories);
+  updateCategories(id:CategoriesModel['id_category'], categories: UpdateCategoriesModelDto) {
+    console.log(categories)
+    const category= {name_category:categories.name_category, description:categories.description}
+    const url = `${this.API_URL}/${id}`
+    return this.httpClient.patch(url, category);
   }
 
-  destroyCategories(id: CategoriesModel['id']):Observable<boolean>  {
+  destroyCategories(id: CategoriesModel['id_category']):Observable<boolean>  {
     const url = `${this.API_URL}/${id}`;
     return this.httpClient.delete<any>(url).pipe(map((response: { rta: boolean }) => { return response.rta })
     );

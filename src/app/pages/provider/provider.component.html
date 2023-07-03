@@ -1,9 +1,7 @@
 <div class="text" > PROVEEDORES</div>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="/dashboard/new-provider"><i class="mdi mdi-shape-rectangle-plus"></i>Añadir provedores</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+  <a href="/dashboard/new-providers"><button  type="button" class="btn btn-info"><i
+    class="mdi mdi-shape-rectangle-plus"></i>Anadir Proveedores</button></a>
   <div class="collapse navbar-collapse" id="navbarNav">
     
   </div>
@@ -22,7 +20,7 @@
       <td>{{provider.direction}}</td>
       <td>{{provider.telephone}}</td>
       <td><button class="btn btn-outline"><!-- Button trigger modal --> 
-          <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="editar(provider.id_provider)"> Editar</button>
+          <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal" > Editar</button>
 
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -30,20 +28,20 @@
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Editar Producto</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Editar provedores</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
                 <h1>PROVEEDORES</h1>
                 <form class="form__reg">
-                  <input class="input" type="text" placeholder="&#128100;  Nombre" name="nombres" autofocus>
-                  <input class="input" type="text" placeholder="&#8962;  Direccion" name="description" required>
-                  <input class="input" type="number" placeholder="&#8962;  telefono" name="telefono" required minlength="10" maxlength="15">
+                  <input class="input" type="text" placeholder="&#128100;  Nombre" name="nombres"[(ngModel)]="provider.name_provider"autofocus>
+                  <input class="input" type="text" placeholder="&#8962;  Direccion" name="description" [(ngModel)]="provider.direction"required>
+                  <input class="input" type="number" placeholder="&#8962;  telefono" name="telefono"[(ngModel)]="provider.telephone" required minlength="10" maxlength="15">
 
                 </form>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" (click)="updateProvider(provider)">Cerrar</button>
                 <button type="button" class="btn btn-info">Guardar cambios</button>
               </div>
             </div>

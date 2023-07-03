@@ -7,7 +7,7 @@ import { Observable, map } from 'rxjs';
   providedIn: 'root'
 })
 export class ProductsService {
-  readonly API_URL = 'https://api.escuelajs.co/api/v1/products';
+  readonly API_URL = 'http://localhost:3000/api/v1/product';
   constructor(private httpClient: HttpClient) { }
   
   getAllProducts(): Observable<ProductsModel[]> {
@@ -20,7 +20,13 @@ export class ProductsService {
     return this.httpClient.get<ProductsModel>(url);
   }
 
-  createProducts(product: CreateProductDto): Observable<ProductsModel> {
+  createProducts({category, ...productData}:CreateProductDto): Observable<ProductsModel> {
+    const product = {
+      ...productData, 
+      category:{
+        name_category: category
+      }
+    }
     const url = `${this.API_URL}`;
     return this.httpClient.post<ProductsModel>(url, product);
   }

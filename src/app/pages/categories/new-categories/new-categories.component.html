@@ -8,7 +8,7 @@
             <div class="btn__form">
                 <input class="btn__submit" type="submit" value="REGISTRAR"  data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="registerCategories(category)" >
             <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal" id="exampleModal" tabindex="-1" aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
@@ -18,7 +18,7 @@
                     Categoria Registrada con Exito!!
                   </div>
                   <div class="modal-footer">
-                    <input class="btn btn-secondary" type="reset" value="Listo" href="/dashboard/categories">
+                    <input class="btn btn-secondary" data-bs-dismiss="modal" type="reset" value="Listo"  [routerLink]="['/dashboard/categories']">
                   </div>
                 </div>
               </div>

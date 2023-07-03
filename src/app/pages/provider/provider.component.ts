@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ProvidersModel } from 'src/app/entities/providers.model';
+import { ProvidersModel, UpdateProvidersModelDto } from 'src/app/entities/providers.model';
 import { ProvidersService } from 'src/app/services/providers.service';
 
 @Component({
@@ -32,6 +32,22 @@ export class ProviderComponent implements OnInit {
         this.provider=this.provider.filter(
           provider=>provider.id_provider!= id_providers)
       })
+  }
+
+
+  providerModel: UpdateProvidersModelDto = {
+    name_provider: '',
+    direction: '',
+    telephone:''
+  }
+
+  updateProvider(provider: UpdateProvidersModelDto) {
+    console.log(provider)
+    console.log('update')
+    const response = this.providersService.update(provider.id_provider, provider)
+      .subscribe((response) => {
+        console.log(response);
+      });
   }
 
 }

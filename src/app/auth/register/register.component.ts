@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { CreateAdminModelDto } from 'src/app/entities/admin.model';
 import { adminService } from 'src/app/services/admin.service';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-register',
@@ -35,7 +36,10 @@ export class RegisterComponent {
 
   form:any;
 
-  constructor(private adminService: adminService){}
+  constructor(
+    private adminService: adminService,
+    private authService: AuthService
+  ){}
 
   Createadmin: CreateAdminModelDto={
     name_admin: '',
@@ -48,8 +52,7 @@ export class RegisterComponent {
 
   registerAdmin(Createadmin: CreateAdminModelDto) {
     console.log(Createadmin)
-    const response = this.adminService.
-    store(Createadmin)
+      const response = this.authService.register(Createadmin)
       .subscribe((response) => {
         console.log(response);
       });

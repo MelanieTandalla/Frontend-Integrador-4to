@@ -12,25 +12,22 @@ import { ProductsService } from 'src/app/services/products.service';
 export class NewProductComponent {
   constructor(private productsService: ProductsService, private categoriesService: CategoriesService) { }
 
-  productModel : ProductsModel[]=[];
-  opciones: CategoriesModel[]=[];
+  productModel: ProductsModel[] = [];
+  categorys: CategoriesModel[] = [];
 
   ngOnInit(): void {
-    this.categoriesService.getAllCategories().subscribe(data=>{
-      this.opciones= data;
-    }) 
+    this.categoriesService.getAllCategories().subscribe(data => {
+      this.categorys = data;
+    })
   }
 
   products: CreateProductDto = {
-    id_product: 0,
     name_product: '',
     description: '',
-    id_category: 0,
     unit_price: 0,
-    quantity_available: 0, //cantidad disponible
-    minimum_amount: 0, //cantidad minima
-    unit_box:true,
-    stock: true,
+    quantity_available: 0, //cantidad disponible //cantidad minima
+    until_box: true,
+    category: '',
   }
 
   registerProduct(products: CreateProductDto) {

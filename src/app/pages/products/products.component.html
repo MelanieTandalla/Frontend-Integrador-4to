@@ -12,18 +12,22 @@
   <thead>
     <tr>
       <th scope="col">Nombre</th>
+      <th scope="col">Descripcion</th>
+      <th scope="col">Precio <br> Unitario</th>
+      <th scope="col">Cantidad <br>disponible</th>
+      <th scope="col">Caja o<br>  Unidad</th>
       <th scope="col">Categoria</th>
-      <th scope="col">Precio</th>
-      <th scope="col">Productos <br> disponibles </th>
       <th scope="col"> </th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>Plancha</td>
-      <td>Electrodometico</td>
-      <td>$20</td>
-      <td>4</td>
+    <tr *ngFor="let product of products">
+      <td>{{product.name_product}}</td>
+      <td>{{product.description}}</td>
+      <td>{{product.unit_price}}</td>
+      <td>{{product.quantity_available}}</td>
+      <td>{{product.until_box}}</td>
+      <td>{{product.category.name_category}}</td>
       <td><button class="btn btn-outline"><button class="btn btn-outline"><!-- Button trigger modal -->
         <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal1">
           Editar
@@ -80,122 +84,6 @@
         </div></td>
         
     </tr>
-    <tr>
-      <td>Plancha</td>
-      <td>Electrodometico</td>
-      <td>$20</td>
-      <td>4</td>
-      <td><button class="btn btn-outline"><button class="btn btn-outline"><!-- Button trigger modal -->
-        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal1">
-          Editar
-        </button>
-
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
-          aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Editar Producto</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                <h1>CATEGORIA</h1>
-                <form class="form__reg">
-                  <input class="input" type="text" placeholder="&#128100;  Nombre" name="nombres" autofocus>
-                  <input class="input" type="text" placeholder="&#8962;  Descripcion" name="Categoria" required>
-                  <input class="input" type="text" placeholder="&#8962;  Precio" name="precio" required>
-                  <input class="input" type="text" placeholder="&#8962;  Producto" name="Productos" required>
-                </form>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-info">Guardar cambios</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </button></button></td>
-      <td><!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-          Eliminar
-        </button>
-        
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                Estas seguro que quieres eliminar este producto?
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Eliminar</button>
-              </div>
-            </div>
-          </div>
-        </div></td>
-    </tr>
-    <tr>
-      <td>Plancha</td>
-      <td>Electrodometico</td>
-      <td>$20</td>
-      <td>4</td>
-      <td><button class="btn btn-outline"><button class="btn btn-outline"><!-- Button trigger modal -->
-        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal1">
-          Editar
-        </button>
-
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
-          aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Editar Producto</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                <h1>CATEGORIA</h1>
-                <form class="form__reg">
-                  <input class="input" type="text" placeholder="&#128100;  Nombre" name="nombres" autofocus>
-                  <input class="input" type="text" placeholder="&#8962;  Descripcion" name="Categoria" required>
-                  <input class="input" type="text" placeholder="&#8962;  Precio" name="precio" required>
-                  <input class="input" type="text" placeholder="&#8962;  Producto" name="Productos" required>
-                </form>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-info">Guardar cambios</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </button></button></td>        
-      <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Eliminar
-      </button>
-      
-      <!-- Modal -->
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              Estas seguro que quieres eliminar este producto?
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Eliminar</button>
-            </div>
-          </div>
-        </div>
-      </div></td>
-    </tr>
+   
   </tbody>
 </table>

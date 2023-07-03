@@ -12,12 +12,13 @@ import { ProductsService } from 'src/app/services/products.service';
 export class ProductsComponent {
 
   products: ProductsModel[] = [];
-  selectedProduct: UpdateProductDto={}
 
   constructor(private productsService: ProductsService, private categoriesService: CategoriesService) {}
 
   ngOnInit(): void {  
-
+    this.productsService.getAllProducts().subscribe(data=>{
+      this.products = data;
+    })
   }
 
   
@@ -42,12 +43,6 @@ export class ProductsComponent {
           console.log(response)})
     }
 
-    createProduct(products: ProductsModel){
-      const response = this.productsService
-          .createProducts(products).subscribe((response) => {
-            console.log(response);
-          });
-    }
 
     deleteProduct(id:ProductsModel['id_product']){
       this.productsService.destroyProducts(id).subscribe(

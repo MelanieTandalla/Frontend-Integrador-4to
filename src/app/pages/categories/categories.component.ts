@@ -11,44 +11,48 @@ import { CategoriesService } from 'src/app/services/categories.service';
   styleUrls: ['./categories.component.css']
 })
 export class CategoriesComponent implements OnInit {
-   
-  constructor(private categoriesService: CategoriesService) {}
+
+  constructor(private categoriesService: CategoriesService) { }
 
 
   ngOnInit(): void {
-    this.categoriesService.getAllCategories().subscribe(data=>{
-      this.categories= data;
-    })     
+    this.categoriesService.getAllCategories().subscribe(data => {
+      this.categories = data;
+    })
   }
 
-
-  categoryModel: UpdateCategoriesModelDto={
-    id:'',
-    name_category:'',
-    description:''
-  }
-
-  categories: CategoriesModel[]=[];
-
-  deletecategory(id:CategoriesModel['id']){
+  deletecategory(id: CategoriesModel['id_category']) {
+    console.log(id)
     this.categoriesService.destroyCategories(id).subscribe(
-      response=>{
-        this.categories=this.categories.filter(
-          category=>category.id != id)
+      response => {
+        this.categories = this.categories.filter(
+          category => category.id_category != id)
       })
   }
 
-  updateCategory(category: UpdateCategoriesModelDto) {
+  //UPDATE
+  categoryModel: UpdateCategoriesModelDto = {
+    name_category: '',
+    description: ''
+  }
+
+  categories: CategoriesModel[] = [];
+
+
+  updateCategory(categories: UpdateCategoriesModelDto) {
+    console.log(categories)
+    console.log('update')
     const response = this.categoriesService
-    .updateCategories(category)
+      .updateCategories(categories.id_category, categories)
       .subscribe((response) => {
         console.log(response);
       });
   }
-
-  
-
 }
+
+
+
+
 
 
 
