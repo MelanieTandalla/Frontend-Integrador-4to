@@ -5,6 +5,7 @@ import { FooterComponent } from './footer/footer.component';
 import { NavComponent } from './nav/nav.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -17,14 +18,16 @@ import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
     BreadcrumbsComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule, 
+    ReactiveFormsModule 
   ],
   exports: [
   HeaderComponent,
   FooterComponent,
   NavComponent,
   SidebarComponent,
-  BreadcrumbsComponent
+  BreadcrumbsComponent,
 ]
 })
 export class SharedModule { }
