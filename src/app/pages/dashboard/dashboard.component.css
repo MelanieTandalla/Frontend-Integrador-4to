@@ -30,3 +30,15 @@ td{
 .stat{
     text-align: center;
 }
+
+.space {
+  width: 20px;
+  height: auto;
+  display: inline-block;
+}
+
+.space1 {
+  width: 180px;
+  height: auto;
+  display: inline-block;
+}
