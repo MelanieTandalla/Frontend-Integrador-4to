@@ -2,7 +2,7 @@
 <nav class="navbar">
   <a href="/dashboard/new_categories"><button  type="button" class="btn btn-outline-info"><i
     class="mdi mdi-shape-rectangle-plus"></i>Anadir Categorias</button></a>
-  
+
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
     aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -23,7 +23,7 @@
     <tr *ngFor="let category of categories">
       <td >{{category.name_category}}</td>
       <td>{{category.description}}</td>
-      <td><button class="btn btn-outline"><!-- Button trigger modal --> 
+      <td><button class="btn btn-outline"><!-- Button trigger modal -->
           <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="mdi mdi-pencil"></i> Editar</button>
 
           <!-- Modal -->
@@ -51,7 +51,7 @@
           </div>
         </button></td>
         <td><button class="btn btn-primary" (click)="deletecategory(category.id_category)">Eliminar</button></td>
-     
+
     </tr>
 
   </tbody>
