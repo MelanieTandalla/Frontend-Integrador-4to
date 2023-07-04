@@ -1,12 +1,18 @@
 <div class="container">
-    <div class="contact-box">
+    <h1>NUEVA CATEGORIA</h1>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
-            <h2>Perfil Administrador</h2>
-            <input type="text" class="field" placeholder="Nombre" [(ngModel)]="admin.name_admin">
-            <input type="text" class="field" placeholder="Email" [(ngModel)]="admin.gmail">
-            <input type="text" class="field" placeholder="Celular" [(ngModel)]="admin.telephone"  min="0" step="5" max="10">
-            <input type="password" class="field" placeholder="Contraseña" [(ngModel)]="admin.password">
-            <button class="btn">Guardar</button>
+<div class="carta_perfi" >
+    <div class="carta_header">
+        <div class="avatar">
+            <img src="https://e7.pngegg.com/pngimages/627/693/png-clipart-computer-icons-user-user-icon-face-monochrome.png" alt="">
+        </div>
+        <div class="textos">
+             <h3 class="nombre"><i class="mdi mdi-account"></i>Nombre</h3><input type="text" [(ngModel)]="admin.name_admin">
+             <h3><i class="mdi mdi-phone"></i>Telefono</h3><input type="text" [(ngModel)]="admin.telephone">
+             <h3><i class="mdi mdi-gmail"></i>Gmail</h3><input type="text" [(ngModel)]="admin.gmail">
+             <h3><i class="mdi mdi-lock"></i>Contraseña</h3><input type="password" [(ngModel)]="admin.password">
+        </div>
     </div>
 </div>
 
