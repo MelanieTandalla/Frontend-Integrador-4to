@@ -84,15 +84,17 @@ input{
 	height: 29px;
 	width: 275px;
 	padding:0px 20px 0 20px;
+	background-color: #fcefe4;
 
 }
 
 h3{
-	padding-top: 10px;
+	padding-top: 15px;
 }
 
 .nombre{
 	padding-top: 40px;
+	
 }
 
 .center{
