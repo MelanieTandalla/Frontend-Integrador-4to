@@ -6,7 +6,6 @@ import { PagesComponent } from './pages.component';
 import { AuthModule } from '../auth/auth.module';
 import { ProductsComponent } from './products/products.component';
 import { CategoriesComponent } from './categories/categories.component';
-import { ProductDetailsComponent } from './products/product-details/product-details.component';
 import { InputDetailComponent } from './input-detail/input-detail.component';
 import { OutputDetailComponent } from './output-detail/output-detail.component';
 import { NewProductComponent } from './products/new-product/new-product.component';
@@ -30,7 +29,6 @@ const routes: Routes = [
       { path:'categories', component: CategoriesComponent },
       { path:'inputdetails', component: InputDetailComponent },
       { path:'outputdetails', component: OutputDetailComponent },
-      { path:'product_details', component: ProductDetailsComponent },
       { path:'new_product', component: NewProductComponent },
       { path:'new_categories', component: NewCategoriesComponent },
       { path:'profile_admin', component: ProfileAdminComponent },
@@ -60,7 +58,8 @@ const routes: Routes = [
     AuthModule,
     FormsModule, 
     ReactiveFormsModule,
-    RouterLink
+    RouterLink,
+    
   ]
 })
 export class PagesRoutingModule { }

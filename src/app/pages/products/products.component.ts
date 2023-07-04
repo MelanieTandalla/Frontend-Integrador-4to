@@ -12,12 +12,17 @@ import { ProductsService } from 'src/app/services/products.service';
 export class ProductsComponent {
 
   products: ProductsModel[] = [];
+  categorys: CategoriesModel[] = [];
+
 
   constructor(private productsService: ProductsService, private categoriesService: CategoriesService) {}
 
   ngOnInit(): void {  
     this.productsService.getAllProducts().subscribe(data=>{
       this.products = data;
+      this.categoriesService.getAllCategories().subscribe(data => {
+        this.categorys = data;
+      })
     })
   }
 
@@ -47,6 +52,22 @@ export class ProductsComponent {
      }
 
      productModel: UpdateProductDto={
+      id_product: 0,
+      name_product: '',
+      description: '',
+      unit_price: 0,
+      quantity_available: 0, //cantidad disponibl/cantidad minima
+      until_box: true,
+      category: 0,
+      name_category: ''
 
      }
+
+     updateProducts(products: UpdateProductDto) {
+      const response = this.productsService
+        .updateProducts(products.id_product, products)
+        .subscribe((response) => {
+          console.log(response);
+        });
+    }
 }

@@ -15,6 +15,7 @@ export interface CreateProductDto extends Omit<ProductsModel,'id_product'|'categ
   category: string
 }
 
-export interface UpdateProductDto extends Omit<ProductsModel, 'id_category'> {
-  id_category?:number;
+export interface UpdateProductDto extends Omit<ProductsModel, 'category'| 'name_category'> {
+  category:number;
+  name_category: string
 }

@@ -35,6 +35,7 @@ import { NewOutputDetaisComponent } from './output-details/new-output-detais/new
         PagesModule,
         FormsModule,
         ReactiveFormsModule,
+        NgModule
     ]
 })
 export class AppModule {}

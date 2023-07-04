@@ -41,7 +41,7 @@
       <td>{{product.category.name_category}}</td>
       <td><button class="btn btn-outline"><button class="btn btn-outline"><!-- Button trigger modal -->
         <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal1">
-          Editar
+          <i class="mdi mdi-border-color"></i>Editar
         </button>
 
         <!-- Modal -->
@@ -54,13 +54,13 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                <h1>CATEGORIA</h1>
+                <h1>PRODUCTO</h1>
                 <form class="form__reg">
                   <input class="input" type="text" placeholder="&#128100;  Nombre" name="nombres" autofocus>
-                  <input class="input" type="text" placeholder="&#8962;  Descripcion" name="Categoria" required>
-                  <input class="input" type="text" placeholder="&#8962;  Precio" name="precio" required>
-                  <input class="input" type="text" placeholder="&#8962;  Producto" name="Productos" required>
-
+                  <input class="input" type="text" placeholder="&#128100;  Descripcion" name="description" autofocus>
+                  <input class="input" type="number" placeholder="&#8962;  Precio Unitario"name="precio unitario" required>
+                  <input class="input" type="number" placeholder="&#8962;  Cantidad disponible" name="Cantidad" required>
+                  
                 </form>
               </div>
               <div class="modal-footer">
