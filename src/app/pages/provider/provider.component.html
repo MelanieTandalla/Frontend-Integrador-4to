@@ -58,7 +58,7 @@
           </div>
         </div>
       </button></td>
-      <td><button class="btn btn-primary" (click)="delete_provider(provider.id_provider)">Eliminar</button>
+      <td><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal4" >Eliminar</button>
         <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
@@ -70,7 +70,7 @@
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Eliminar</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="delete_provider(provider.id_provider)">Eliminar</button>
               </div>
             </div>
           </div>

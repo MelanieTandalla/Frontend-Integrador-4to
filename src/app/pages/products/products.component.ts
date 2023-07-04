@@ -45,4 +45,9 @@ export class ProductsComponent {
           this.products= this.products.filter(product => product.id_product != id);
           console.log(response)})
      }
+
+     productosinsuficientes: boolean= false;
+     verificarStock(){
+       return this.products.length <4;
+     }
 }
