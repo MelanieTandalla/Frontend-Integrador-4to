@@ -4,7 +4,7 @@
         <form class="form__reg">
             <input class="input" type="text" placeholder="&#128100;  Nombre del Proveedor" name ="Nombres"[(ngModel)]="providers.name_provider" required minlength="10" maxlength="20">
             <input class="input" type="text" placeholder="&#8962;  Direccion" name ="Direecion" required [(ngModel)]="providers.direction" required minlength="10" maxlength="30">
-                <input class="input" type="text" placeholder="&#8962;  Telefono" name ="Telefono" required [(ngModel)]="providers.telephone" required maxlength="8" [formControl]="telefonoCtrl">
+                <input class="input" type="text" placeholder="&#8962;  Telefono" name ="Telefono" required [(ngModel)]="providers.telephone" required maxlength="10" [formControl]="telefonoCtrl">
                 <p *ngIf="telefonoCtrl.errors && telefonoCtrl.dirty"> <small class="text-danger" *ngIf="telefonoCtrl.hasError('required')">Este campo es requerido</small>
                     <small class="text-danger" *ngIf="telefonoCtrl.hasError('pattern')">¡El numero de telefono solo acepta numeros!<br> Evite usar letras o caracteres especiales ej: (*$%, etc)</small>
                     <small class="text-danger" *ngIf="telefonoCtrl.hasError('maxlength')">Debe tener como maximo 10 dijitos</small>

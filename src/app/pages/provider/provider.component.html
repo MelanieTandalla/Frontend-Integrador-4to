@@ -10,7 +10,7 @@
   </nav>
 </div>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a href="/dashboard/new-providers"><button  type="button" class="btn btn-info"><i
+  <a href="/dashboard/new-providers"><button  type="button"  class="btn btn-outline-info"><i
     class="mdi mdi-shape-rectangle-plus"></i>Anadir Proveedores</button></a>
   <div class="collapse navbar-collapse" id="navbarNav">
 
@@ -51,8 +51,8 @@
                 </form>
               </div>
               <div class="modal-footer">
-                <button type="button" (click)="updateProvider(provider)">Cerrar</button>
-                <button type="button" class="btn btn-info">Guardar cambios</button>
+                <button type="button" ata-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-info" data-bs-dismiss="modal" (click)="updateProvider(provider)">Guardar cambios</button>
               </div>
             </div>
           </div>

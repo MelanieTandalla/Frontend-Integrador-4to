@@ -46,8 +46,7 @@ export class ProductsComponent {
           console.log(response)})
      }
 
-     productosinsuficientes: boolean= false;
-     verificarStock(){
-       return this.products.length <4;
+     productModel: UpdateProductDto={
+
      }
 }

@@ -10,8 +10,8 @@
   </nav>
 </div>
 <nav class="navbar">
-  <a href="/dashboard/new_categories"><button  type="button" class="btn btn-outline-info"><i
-    class="mdi mdi-shape-rectangle-plus"></i>Anadir Categorias</button></a>
+  <a href="/dashboard/new_categories"><button type="button" class="btn btn-outline-info"><i
+        class="mdi mdi-shape-rectangle-plus"></i>Anadir Categorias</button></a>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
     aria-expanded="false" aria-label="Toggle navigation">
@@ -31,10 +31,11 @@
   </thead>
   <tbody>
     <tr *ngFor="let category of categories " [class.active]="category == category">
-      <td >{{category.name_category}}</td>
+      <td>{{category.name_category}}</td>
       <td>{{category.description}}</td>
       <td><button class="btn btn-outline"><!-- Button trigger modal -->
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="mdi mdi-pencil"></i> Editar</button>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+              class="mdi mdi-pencil"></i> Editar</button>
 
           <!-- Modal -->
           <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -42,46 +43,57 @@
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel" >Editar Producto</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
+                  <h5 class="modal-title" id="exampleModalLabel">Editar Producto</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                   <h1>CATEGORIA</h1>
                   <form class="form__reg">
-                    <input class="input" type="text" placeholder="&#128100;  Nombre" name="nombres" [(ngModel)]="category.name_category"  autofocus>
-                    <input class="input" type="text" placeholder="&#8962;  Descripcion" name="description"[(ngModel)]="category.description" required>
+                    <input class="input" type="text" placeholder="&#128100;  Nombre" name="nombres"
+                      [(ngModel)]="category.name_category" autofocus>
+                    <input class="input" type="text" placeholder="&#8962;  Descripcion" name="description"
+                      [(ngModel)]="category.description" required>
                   </form>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                  <button type="button" class="btn btn-info" (click)="updateCategory(category)" >Guardar cambios</button>
+                  
+                  <button type="button" class="btn btn-info" data-bs-dismiss="modal" (click)="updateCategory(category)">Guardar cambios</button>
                 </div>
               </div>
             </div>
           </div>
-        </button></td>
-        <td><button class="btn btn-primary" (click)="deletecategory(category.id_category)">Eliminar</button>
-          <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        </button><td><!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal5">
+            Eliminar
+          </button>
+  
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title">Título del modal</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                  <p>Seguro que quieres borrar esta categoria</p>
+                  Estas seguro que quieres eliminar este producto?
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                  <button type="button" class="btn btn-primary">Aceptar</button>
+                  <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="deletecategory(category.id_category)">Eliminar</button>
                 </div>
               </div>
             </div>
-          </div>
-        </td>
+          </div></td>
 
     </tr>
 
   </tbody>
 </table>
 
+
+<script>
+  function mostrarAlerta() {
+    alert("¡Esto es una alerta!");
+  }
+</script>
