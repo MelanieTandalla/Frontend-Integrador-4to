@@ -32,25 +32,25 @@
     </select>
 
     <div class="btn__form">
-      <div class="btn__form">
-        <input class="btn__submit" type="submit" value="REGISTRAR" data-bs-toggle="modal" data-bs-target="#exampleModal"
-          (click)="registerProduct(products)">
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                Categoria Registrada con Exito!!
-              </div>
-              <div class="modal-footer">
-                <input class="btn btn-secondary" type="reset" value="Listo" href="/dashboard/categories">
-              </div>
-            </div>
-          </div>
+      <input class="btn__submit" type="submit" value="REGISTRAR"  data-bs-toggle="modal" data-bs-target="#exampleModal"(click)="registerProduct(products)">
+  <!-- Modal -->
+  <div class="modal" id="exampleModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <input class="btn__reset" type="reset" value="LIMPIAR">
-
+        <div class="modal-body">
+          Producto Registrado con Exito!!
+        </div>
+        <div class="modal-footer">
+          <input class="btn btn-secondary" data-bs-dismiss="modal" type="reset" value="Listo"  [routerLink]="['/dashboard/product']">
+        </div>
       </div>
+    </div>
+  </div>
+      <input class="btn__reset" type="reset" value="LIMPIAR">	
+  </div>
+</form>
+
+</div>

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterLink, RouterModule, Routes } from '@angular/router';
 import { PagesComponent } from './pages.component';
 import { AuthModule } from '../auth/auth.module';
 import { ProductsComponent } from './products/products.component';
@@ -59,7 +59,8 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     AuthModule,
     FormsModule, 
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterLink
   ]
 })
 export class PagesRoutingModule { }

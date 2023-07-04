@@ -10,12 +10,13 @@ import { CategoriesComponent } from './categories/categories.component';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProviderComponent } from './provider/provider.component';
 import { NewProviderComponent } from './provider/new-provider/new-provider.component';
+import { RouterLink } from '@angular/router';
 
 
 
 @NgModule({
   declarations: [ DashboardComponent, ProductsComponent, InputDetailComponent, OutputDetailComponent, ProfileAdminComponent, ProductDetailsComponent, CategoriesComponent, ProviderComponent, NewProviderComponent],
-  imports: [CommonModule,  FormsModule, ReactiveFormsModule ],
+  imports: [CommonModule,  FormsModule, ReactiveFormsModule, RouterLink ],
   exports: [ DashboardComponent,ProductsComponent ],
 })
 export class PagesModule {}

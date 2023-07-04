@@ -20,7 +20,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let category of categories">
+    <tr *ngFor="let category of categories " [class.active]="category == category">
       <td >{{category.name_category}}</td>
       <td>{{category.description}}</td>
       <td><button class="btn btn-outline"><!-- Button trigger modal --> 
@@ -44,7 +44,7 @@
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                  <button type="button" class="btn btn-info" (click)="updateCategory(category)">Guardar cambios</button>
+                  <button type="button" class="btn btn-info" (click)="updateCategory(category)" >Guardar cambios</button>
                 </div>
               </div>
             </div>

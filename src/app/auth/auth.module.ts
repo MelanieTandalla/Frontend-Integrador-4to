@@ -4,6 +4,7 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { AuthComponent } from './auth.component';
 import { FormControl, FormControlDirective, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 
 
 
@@ -16,8 +17,8 @@ import { FormControl, FormControlDirective, FormsModule, ReactiveFormsModule } f
   imports: [
     CommonModule,
     FormsModule, 
-    ReactiveFormsModule 
-
+    ReactiveFormsModule,
+    RouterLink
   ]
 })
 export class AuthModule { }

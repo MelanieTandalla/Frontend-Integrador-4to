@@ -37,11 +37,6 @@ export class ProductsComponent {
           )
     }
 
-    getProduct(){
-      this.productsService.getOneProducts(498).subscribe(
-        response=>{
-          console.log(response)})
-    }
 
 
     deleteProduct(id:ProductsModel['id_product']){

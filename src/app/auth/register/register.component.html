@@ -53,9 +53,8 @@
                             letras sin espacios!<br> Evite usar números o caracteres especiales ej: (*$%, etc)</small>
                     </p>
 
-                    <input id="phone" type="number" placeholder="Phone" name="phone" required minlength="10"
-                        maxlength="10" [(ngModel)]="Createadmin.telephone">
-                        
+                    <input id="phone" type="number" placeholder="Phone" name="phone" required minlength="10" maxlength="10" [(ngModel)]="Createadmin.telephone">
+
                     <input id="gmail" type="text" placeholder="Gmail" name="gmail" required minlength="10"
                         maxlength="30" [formControl]="emailCtrl" [(ngModel)]="Createadmin.gmail">
                     <p *ngIf="emailCtrl.errors && emailCtrl.dirty"> <small class="text-danger"
@@ -66,11 +65,34 @@
                     <input id="password" type="password" placeholder="Contraseña" name="password" required
                         minlength="10" maxlength="20" [(ngModel)]="Createadmin.password">
 
+                        
 
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        (click)="registerAdmin(Createadmin)">
+                        Registrar
+                    </button>
 
-
-                    <button type="submit" title="Registrarse" (click)="registerAdmin(Createadmin)"><i
-                            class="mdi mdi-account"></i>Registrarse</button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Usuario Registrado con exito!!
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Cerrar</button>
+                                    <button type="button" class="btn btn-outline-info" data-bs-dismiss="modal" [routerLink]="['/login']">Iniciar Sesion</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </form>
 
             </div>
