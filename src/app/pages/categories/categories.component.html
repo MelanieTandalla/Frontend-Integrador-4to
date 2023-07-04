@@ -3,7 +3,7 @@
   <nav class="navbar navbar-light bg-light">
     <div class="container-fluid">
       <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+        <input class="form-control me-2" type="search" placeholder="Buscar" name="filterpost" [(ngModel)]="filterpost">
         <button class="btn btn-outline-success" type="submit">Buscar</button>
       </form>
     </div>
@@ -30,7 +30,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let category of categories " [class.active]="category == category">
+    <tr *ngFor="let category of categories">
       <td>{{category.name_category}}</td>
       <td>{{category.description}}</td>
       <td><button class="btn btn-outline"><!-- Button trigger modal -->
@@ -64,7 +64,7 @@
             </div>
           </div>
         </button><td><!-- Button trigger modal -->
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal5">
+          <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal5">
             Eliminar
           </button>
   

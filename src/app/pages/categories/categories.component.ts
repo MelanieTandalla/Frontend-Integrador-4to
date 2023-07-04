@@ -13,13 +13,16 @@ import { CategoriesService } from 'src/app/services/categories.service';
 export class CategoriesComponent implements OnInit {
 
   constructor(private categoriesService: CategoriesService) { }
-
-
+  categories: CategoriesModel[] = [];
+  filterpost: string = '';
+  
   ngOnInit(): void {
     this.categoriesService.getAllCategories().subscribe(data => {
       this.categories = data;
     })
   }
+
+
 
   deletecategory(id: CategoriesModel['id_category']) {
     console.log(id)
@@ -36,7 +39,7 @@ export class CategoriesComponent implements OnInit {
     description: ''
   }
 
-  categories: CategoriesModel[] = [];
+
 
 
   updateCategory(categories: UpdateCategoriesModelDto) {

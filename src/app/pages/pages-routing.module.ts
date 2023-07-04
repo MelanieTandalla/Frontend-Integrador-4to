@@ -16,6 +16,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProviderComponent } from './provider/provider.component';
 import { NewProviderComponent } from './provider/new-provider/new-provider.component';
 import { LoginComponent } from '../auth/login/login.component';
+import { pipe } from 'rxjs';
 
 
 
@@ -59,7 +60,6 @@ const routes: Routes = [
     FormsModule, 
     ReactiveFormsModule,
     RouterLink,
-    
   ]
 })
 export class PagesRoutingModule { }

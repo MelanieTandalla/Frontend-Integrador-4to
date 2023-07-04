@@ -13,6 +13,7 @@ import { NewCategoriesComponent } from './pages/categories/new-categories/new-ca
 import { NewInputDetailsComponent } from './pages/input-detail/new-input-details/new-input-details.component';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NewOutputDetaisComponent } from './output-details/new-output-detais/new-output-detais.component';
+import { FilterPipe } from './pipes/filter.pipe.pipe';
 
 @NgModule({
     declarations: [
@@ -23,6 +24,7 @@ import { NewOutputDetaisComponent } from './output-details/new-output-detais/new
         NewCategoriesComponent,
         NewInputDetailsComponent,
         NewOutputDetaisComponent,
+        
     ],
     providers: [],
     bootstrap: [AppComponent],
@@ -35,7 +37,6 @@ import { NewOutputDetaisComponent } from './output-details/new-output-detais/new
         PagesModule,
         FormsModule,
         ReactiveFormsModule,
-        NgModule
     ]
 })
 export class AppModule {}
